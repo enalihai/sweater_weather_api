@@ -1,6 +1,7 @@
 ## What this PR Covers  
 
-## Type of Content in PR
+## Type of Content in PR  
+
 - [ ] Spec Files
 - [ ] Controllers / Facades / Poros
 - [ ] Service Requests
@@ -15,6 +16,7 @@ Is this a fully completed API Endpoint?
 
 - [ ] yes
 - [ ] no
+
 If no, what files are not being covered?  
 
 ## Tested on Localhost/Postman  
