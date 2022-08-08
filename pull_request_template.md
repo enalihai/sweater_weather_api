@@ -7,25 +7,23 @@
 - [ ] Controllers / Facades / Poros
 - [ ] Service Requests
 - [ ] Route Change
-- [ ] Gemfile Update  
+- [ ] Gemfile Update
+- [ ] Other:  
 
-## Is this a fully completed API Endpoint?  
+
+Is this a fully completed API Endpoint?  
 
 - [ ] yes - API Endpoint: 
 - [ ] no  
 
 ## Simplecov 100% Coverage  
-
 - [ ] yes
-- [ ] no
-
+- [ ] no  
 If no, what files are not being covered?  
 
 ## Tested on Localhost/Postman  
-
 - [ ] yes
 - [ ] no  
-
 If no, why was it not?  
 
 ## Additional Comments
