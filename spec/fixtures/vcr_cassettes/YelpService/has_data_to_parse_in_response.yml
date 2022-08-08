@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?location=denver&open_at=1659976232&term=chinese
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.5.1
+      'Authorization: bearer':
+      - gx6fVZWpnGZ0TZKZ_rTchYFxGEsZ4J0ZNRNSR2GS0jnSM0BpqwM-IW534niuQLDrmE4YqOfVtjz-NJO9TBHI9KRKS1K-EcueF1wQGiKsbdMIBgkQi-ZcEmVNSSXxYnYx
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '431'
+      Content-Type:
+      - application/json
+      X-B3-Sampled:
+      - '0'
+      X-Routing-Service:
+      - routing-canary--useast1-b99cf5bd6-fmfcd; site=public_api_v3
+      Server:
+      - envoy
+      X-Zipkin-Id:
+      - 8de1e6d2f99f4745
+      X-Cloudmap:
+      - routing_useast1
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-65-103-189-useast1aprod
+      X-Extlb:
+      - 10-65-103-189-useast1aprod
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Mon, 08 Aug 2022 16:30:33 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-dal21220-DAL
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: '{"error": {"code": "VALIDATION_ERROR", "description": "''bearer: gx6fVZWpnGZ0TZKZ_rTchYFxGEsZ4J0ZNRNSR2GS0jnSM0BpqwM-IW534niuQLDrmE4YqOfVtjz-NJO9TBHI9KRKS1K-EcueF1wQGiKsbdMIBgkQi-ZcEmVNSSXxYnYx''
+        does not match ''^(?i)Bearer [A-Za-z0-9\\\\-\\\\_]{128}$''", "field": "Authorization",
+        "instance": "bearer: gx6fVZWpnGZ0TZKZ_rTchYFxGEsZ4J0ZNRNSR2GS0jnSM0BpqwM-IW534niuQLDrmE4YqOfVtjz-NJO9TBHI9KRKS1K-EcueF1wQGiKsbdMIBgkQi-ZcEmVNSSXxYnYx"}}'
+  recorded_at: Mon, 08 Aug 2022 16:30:33 GMT
+recorded_with: VCR 6.1.0
