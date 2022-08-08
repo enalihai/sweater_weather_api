@@ -1,8 +1,8 @@
-class WeatherService
+class ForecastService
   def self.get_forecast_data(coords)
-    response = conn.get('/data/3.0/onecall/') do |f|
-      f.params[:lat] = coords[:lat]
-      f.params[:lon] = coords[:lng]
+    response = conn.get('/data/2.5/onecall/') do |f|
+      f.params[:lat] = coords.lat
+      f.params[:lon] = coords.lon
       f.params[:units] = 'imperial'
       f.params[:exclude] = 'minutely'
     end
