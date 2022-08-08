@@ -30,6 +30,6 @@ RSpec.describe CurrentForecast do
     cf = CurrentForecast.new(current_data)
 
     expect(cf).to be_a CurrentForecast
-    expect(cf.datetime).to 
+    expect(cf.datetime).to be_a String
   end
 end
