@@ -10,7 +10,7 @@ RSpec.describe 'Forecast Request' do
       @response = JSON.parse(response.body, symbolize_names: true)
     end
 
-    it 'returns [:data] with keys [id,type,attributes]' do
+    xit 'returns [:data] with keys [id,type,attributes]' do
       expect(@response).to be_successful
       expect(@response).to have_http_status 200
       
@@ -27,12 +27,12 @@ RSpec.describe 'Forecast Request' do
       expect(@response[:data][:attributes]).to be_a Hash
     end 
 
-    it 'returns attributes via OpenWeather API' do
+    xit 'returns attributes via OpenWeather API' do
       expect(@response[:data][:attributes]).to have_key :current_weather
       expect(@response[:data][:attributes]).to be_a Hash
     end
 
-    it 'returns Current Weather data' do
+    xit 'returns Current Weather data' do
       current_weather = @response[:data][:attributes][:current_weather]
       
       expect(current_weather).to have_key :datetime
@@ -66,7 +66,7 @@ RSpec.describe 'Forecast Request' do
       expect(current_weather[:icon]).to be_a String
     end
 
-    it 'returns Daily Weather data' do
+    xit 'returns Daily Weather data' do
       daily_weather = @response[:data][:attributes][:daily_weather]
 
       expect(daily_weather).to be_a Array
@@ -98,7 +98,7 @@ RSpec.describe 'Forecast Request' do
       end
     end 
 
-    it 'returns Hourly Weather data' do
+    xit 'returns Hourly Weather data' do
       hourly_weather = @response[:data][:attributes][:hourly_weather]
 
       expect(hourly_weather).to be_a Array
