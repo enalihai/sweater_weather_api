@@ -5,9 +5,9 @@ class DailyForecast
               :icon
 
   def initialize(data)
-    @time = Time.at(data[:dt])
-    @temperature = data[:temp]
-    @conditions = data[:weather][:description]
-    @icon = data[:weather][:icon]
+    @time = data[:daily][:dt]
+    @temperature = data[:daily][:temp]
+    @conditions = data[:daily][:weather][:description]
+    @icon = data[:daily][:weather][:icon]
   end
 end

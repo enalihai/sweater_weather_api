@@ -5,9 +5,9 @@ attr_reader :time,
             :icon
 
   def initialize(data)
-    @time = Time.at(data[:dt])
-    @temperature = data[:temp]
-    @conditions = data[:weather][:description]
-    @icon = data[:weather][:icon]
+    @time = data[:hourly][:dt]
+    @temperature = data[:hourly][:temp]
+    @conditions = data[:hourly][:weather][:description]
+    @icon = data[:hourly][:weather][:icon]
   end
 end

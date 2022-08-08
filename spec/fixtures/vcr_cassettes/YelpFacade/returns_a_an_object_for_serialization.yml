@@ -24,38 +24,38 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Server:
-      - envoy
-      Ratelimit-Dailylimit:
-      - '5000'
       Ratelimit-Remaining:
-      - '4981'
+      - '4975'
       Ratelimit-Resettime:
       - '2022-08-09T00:00:00+00:00'
-      X-Routing-Service:
-      - routing-main--useast1-5db947469f-5rh8f; site=public_api_v3
       X-B3-Sampled:
       - '0'
+      Server:
+      - envoy
+      X-Routing-Service:
+      - routing-main--useast1-5db947469f-5rh8f; site=public_api_v3
       X-Zipkin-Id:
-      - 05342a9e15863fc3
+      - 6a73b755b9b7af4e
+      Ratelimit-Dailylimit:
+      - '5000'
       X-Cloudmap:
       - routing_useast1
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-133-10-useast1bprod
+      - 10-65-85-173-useast1aprod
       X-Extlb:
-      - 10-65-133-10-useast1bprod
+      - 10-65-85-173-useast1aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 08 Aug 2022 19:05:08 GMT
+      - Mon, 08 Aug 2022 19:29:24 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-dal21277-DAL
+      - cache-dal21266-DAL
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -129,7 +129,7 @@ http_interactions:
         "review_count": 50, "categories": [{"alias": "chinese", "title": "Chinese"},
         {"alias": "buffets", "title": "Buffets"}, {"alias": "seafood", "title": "Seafood"}],
         "rating": 3.0, "coordinates": {"latitude": 38.3391148483116, "longitude":
-        -104.740540981293}, "transactions": ["delivery", "pickup"], "price": "$$",
+        -104.740540981293}, "transactions": ["pickup", "delivery"], "price": "$$",
         "location": {"address1": "74 Component Dr", "address2": "Ste 150", "address3":
         "", "city": "Pueblo West", "zip_code": "81007", "country": "US", "state":
         "CO", "display_address": ["74 Component Dr", "Ste 150", "Pueblo West, CO 81007"]},
@@ -148,7 +148,7 @@ http_interactions:
         "is_closed": false, "url": "https://www.yelp.com/biz/tea-palace-ii-pueblo?adjust_creative=9QHjj_dZ3mrK-zNxRVMhCQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=9QHjj_dZ3mrK-zNxRVMhCQ",
         "review_count": 18, "categories": [{"alias": "chinese", "title": "Chinese"}],
         "rating": 3.5, "coordinates": {"latitude": 38.267707824707, "longitude": -104.62508392334},
-        "transactions": ["delivery", "pickup"], "price": "$", "location": {"address1":
+        "transactions": ["pickup", "delivery"], "price": "$", "location": {"address1":
         "1212 W 4th St", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
         "81004", "country": "US", "state": "CO", "display_address": ["1212 W 4th St",
         "Pueblo, CO 81004"]}, "phone": "+17195460099", "display_phone": "(719) 546-0099",
@@ -157,8 +157,8 @@ http_interactions:
         "is_closed": false, "url": "https://www.yelp.com/biz/panda-express-pueblo?adjust_creative=9QHjj_dZ3mrK-zNxRVMhCQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=9QHjj_dZ3mrK-zNxRVMhCQ",
         "review_count": 32, "categories": [{"alias": "chinese", "title": "Chinese"},
         {"alias": "hotdogs", "title": "Fast Food"}], "rating": 2.0, "coordinates":
-        {"latitude": 38.2325574, "longitude": -104.6628568}, "transactions": ["delivery",
-        "pickup"], "price": "$$", "location": {"address1": "2001 S. Pueblo Blvd.",
+        {"latitude": 38.2325574, "longitude": -104.6628568}, "transactions": ["pickup",
+        "delivery"], "price": "$$", "location": {"address1": "2001 S. Pueblo Blvd.",
         "address2": "", "address3": "", "city": "Pueblo", "zip_code": "81005", "country":
         "US", "state": "CO", "display_address": ["2001 S. Pueblo Blvd.", "Pueblo,
         CO 81005"]}, "phone": "+17195649000", "display_phone": "(719) 564-9000", "distance":
@@ -167,7 +167,7 @@ http_interactions:
         "is_closed": false, "url": "https://www.yelp.com/biz/pueblo-dragon-2-pueblo?adjust_creative=9QHjj_dZ3mrK-zNxRVMhCQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=9QHjj_dZ3mrK-zNxRVMhCQ",
         "review_count": 10, "categories": [{"alias": "chinese", "title": "Chinese"}],
         "rating": 2.5, "coordinates": {"latitude": 38.24486, "longitude": -104.5646},
-        "transactions": ["delivery", "pickup"], "location": {"address1": "2648 Santa
+        "transactions": ["pickup", "delivery"], "location": {"address1": "2648 Santa
         Fe Dr", "address2": "Ste 9", "address3": null, "city": "Pueblo", "zip_code":
         "81006", "country": "US", "state": "CO", "display_address": ["2648 Santa Fe
         Dr", "Ste 9", "Pueblo, CO 81006"]}, "phone": "+17195443008", "display_phone":
@@ -195,7 +195,7 @@ http_interactions:
         "review_count": 31, "categories": [{"alias": "hawaiian", "title": "Hawaiian"},
         {"alias": "asianfusion", "title": "Asian Fusion"}, {"alias": "bbq", "title":
         "Barbeque"}], "rating": 4.5, "coordinates": {"latitude": 38.3208058831895,
-        "longitude": -104.703300995953}, "transactions": ["delivery", "pickup"], "location":
+        "longitude": -104.703300995953}, "transactions": ["pickup", "delivery"], "location":
         {"address1": "198 S Purcell Blvd", "address2": "", "address3": null, "city":
         "Pueblo West", "zip_code": "81007", "country": "US", "state": "CO", "display_address":
         ["198 S Purcell Blvd", "Pueblo West, CO 81007"]}, "phone": "+17192813795",
@@ -215,7 +215,7 @@ http_interactions:
         "is_closed": false, "url": "https://www.yelp.com/biz/mongolian-grill-pueblo?adjust_creative=9QHjj_dZ3mrK-zNxRVMhCQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=9QHjj_dZ3mrK-zNxRVMhCQ",
         "review_count": 23, "categories": [{"alias": "asianfusion", "title": "Asian
         Fusion"}], "rating": 3.0, "coordinates": {"latitude": 38.2980418, "longitude":
-        -104.6076509}, "transactions": ["delivery", "pickup"], "price": "$$", "location":
+        -104.6076509}, "transactions": ["pickup", "delivery"], "price": "$$", "location":
         {"address1": "164 W 29th St", "address2": null, "address3": null, "city":
         "Pueblo", "zip_code": "81008", "country": "US", "state": "CO", "display_address":
         ["164 W 29th St", "Pueblo, CO 81008"]}, "phone": "+17195434526", "display_phone":
@@ -224,7 +224,7 @@ http_interactions:
         "is_closed": false, "url": "https://www.yelp.com/biz/canton-house-pueblo?adjust_creative=9QHjj_dZ3mrK-zNxRVMhCQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=9QHjj_dZ3mrK-zNxRVMhCQ",
         "review_count": 15, "categories": [{"alias": "cantonese", "title": "Cantonese"}],
         "rating": 3.5, "coordinates": {"latitude": 38.310926, "longitude": -104.628937},
-        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
+        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
         "1617 W US Hwy 50", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
         "81008", "country": "US", "state": "CO", "display_address": ["1617 W US Hwy
         50", "Pueblo, CO 81008"]}, "phone": "+17195454141", "display_phone": "(719)
@@ -234,7 +234,7 @@ http_interactions:
         "is_closed": false, "url": "https://www.yelp.com/biz/tian-jin-oriental-cuisine-pueblo-2?adjust_creative=9QHjj_dZ3mrK-zNxRVMhCQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=9QHjj_dZ3mrK-zNxRVMhCQ",
         "review_count": 24, "categories": [{"alias": "chinese", "title": "Chinese"}],
         "rating": 3.5, "coordinates": {"latitude": 38.243054, "longitude": -104.649384},
-        "transactions": ["delivery", "pickup"], "price": "$", "location": {"address1":
+        "transactions": ["pickup", "delivery"], "price": "$", "location": {"address1":
         "3400 W Northern Ave", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
         "81005", "country": "US", "state": "CO", "display_address": ["3400 W Northern
         Ave", "Pueblo, CO 81005"]}, "phone": "+17195600903", "display_phone": "(719)
@@ -257,5 +257,5 @@ http_interactions:
         CO 81003"]}, "phone": "+17192531985", "display_phone": "(719) 253-1985", "distance":
         3260.634561047277}], "total": 20, "region": {"center": {"longitude": -104.5733642578125,
         "latitude": 38.27035217485165}}}'
-  recorded_at: Mon, 08 Aug 2022 19:05:08 GMT
+  recorded_at: Mon, 08 Aug 2022 19:29:24 GMT
 recorded_with: VCR 6.1.0

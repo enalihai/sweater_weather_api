@@ -19,11 +19,11 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 08 Aug 2022 19:05:10 GMT
+      - Mon, 08 Aug 2022 19:29:25 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '1037'
+      - '1038'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Mon, 08 Aug 2022 19:05:10 GMT
+      - Mon, 08 Aug 2022 19:29:25 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=A941FAC6CD300EC94047FC28C21ECD5B; Path=/; HttpOnly
+      - JSESSIONID=5AA817B6FE580477CA86851A83C77505; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -51,11 +51,11 @@ http_interactions:
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
         2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"nashville,tn"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Nashville","adminArea5Type":"City","adminArea4":"Davidson
-        County","adminArea4Type":"County","adminArea3":"TN","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282087490","unknownInput":"","type":"s","latLng":{"lat":36.166687,"lng":-86.779932},"displayLatLng":{"lat":36.166687,"lng":-86.779932},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=36.166687,-86.779932|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-773963158"}]}]}'
-  recorded_at: Mon, 08 Aug 2022 19:05:10 GMT
+        County","adminArea4Type":"County","adminArea3":"TN","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282087490","unknownInput":"","type":"s","latLng":{"lat":36.166687,"lng":-86.779932},"displayLatLng":{"lat":36.166687,"lng":-86.779932},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=36.166687,-86.779932|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-1950696949"}]}]}'
+  recorded_at: Mon, 08 Aug 2022 19:29:25 GMT
 - request:
     method: get
-    uri: http://www.mapquestapi.com/geocoding/v1/address?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&location=%23%3CCoordinate:0x000000013389deb8%3E
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&location=%23%3CCoordinate:0x00000001334dac68%3E
     body:
       encoding: US-ASCII
       string: ''
@@ -72,7 +72,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 08 Aug 2022 19:05:10 GMT
+      - Mon, 08 Aug 2022 19:29:26 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
@@ -88,13 +88,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Mon, 08 Aug 2022 19:05:10 GMT
+      - Mon, 08 Aug 2022 19:29:26 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=3F53C6E15399A2C9D1061A2FBAB89AF5; Path=/; HttpOnly
+      - JSESSIONID=233A1666CB9CC3830661B47220E2EA66; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -103,8 +103,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
-        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"#<Coordinate:0x000000013389deb8>"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A1XAX","geocodeQuality":"COUNTRY","dragPoint":false,"sideOfStreet":"N","linkId":"282934758","unknownInput":"","type":"s","latLng":{"lat":39.390897,"lng":-99.066067},"displayLatLng":{"lat":39.390897,"lng":-99.066067},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=39.390897,-99.066067|marker-sm-50318A-1&scalebar=true&zoom=2&rand=1871825651"}]}]}'
-  recorded_at: Mon, 08 Aug 2022 19:05:10 GMT
+        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"#<Coordinate:0x00000001334dac68>"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A1XAX","geocodeQuality":"COUNTRY","dragPoint":false,"sideOfStreet":"N","linkId":"282934758","unknownInput":"","type":"s","latLng":{"lat":39.390897,"lng":-99.066067},"displayLatLng":{"lat":39.390897,"lng":-99.066067},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=39.390897,-99.066067|marker-sm-50318A-1&scalebar=true&zoom=2&rand=-547844191"}]}]}'
+  recorded_at: Mon, 08 Aug 2022 19:29:26 GMT
 - request:
     method: get
     uri: https://api.openweathermap.org/data/2.5/onecall/?appid=f57e28372b23bcdc9e27700bd3fdd29a&exclude=minutely&lat=39.390897&lon=-99.066067&units=imperial
@@ -126,7 +126,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 08 Aug 2022 19:05:10 GMT
+      - Mon, 08 Aug 2022 19:29:26 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -144,5 +144,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"cod":"404","message":"Internal error"}'
-  recorded_at: Mon, 08 Aug 2022 19:05:10 GMT
+  recorded_at: Mon, 08 Aug 2022 19:29:26 GMT
 recorded_with: VCR 6.1.0

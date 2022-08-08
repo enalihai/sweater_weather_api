@@ -8,8 +8,7 @@ RSpec.describe ForecastService do
     #   .to_return(status: 200, body: nashville_response, headers: {})
 
     coords = {:lat=>36.166687, :lon=>-86.779932}
-    query_params = Coordinate.new(coords)
-    response = ForecastService.get_forecast_data(query_params)
+    response = ForecastService.get_forecast_data(coords)
 
     expect(response).to be_a Hash
     expect(response).to have_key :current
