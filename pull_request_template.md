@@ -1,5 +1,6 @@
 ## What this PR Covers  
-
+  
+  
 ## Type of Content in PR  
 
 - [ ] Spec Files
@@ -8,7 +9,8 @@
 - [ ] Route Change
 - [ ] Gemfile Update  
 
-Is this a fully completed API Endpoint?
+## Is this a fully completed API Endpoint?  
+
 - [ ] yes - API Endpoint: 
 - [ ] no  
 
@@ -22,7 +24,8 @@ If no, what files are not being covered?
 ## Tested on Localhost/Postman  
 
 - [ ] yes
-- [ ] no
+- [ ] no  
+
 If no, why was it not?  
 
 ## Additional Comments
