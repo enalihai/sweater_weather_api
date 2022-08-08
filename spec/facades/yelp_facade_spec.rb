@@ -12,10 +12,6 @@ RSpec.describe YelpFacade do
     expect(yelp_search[:businesses][0]).to have_key :location
 
     business_location = yelp_search[:businesses][0][:location]
-    expect(business_location).to have_key :address_1
-    expect(business_location).to have_key :address_2
-    expect(business_location).to have_key :city
-    expect(business_location).to have_key :state
-    expect(business_location).to have_key :zip_code
+    expect(business_location).to eq({:address1=>"1620 S Prairie Ave", :address2=>nil, :address3=>nil, :city=>"Pueblo", :country=>"US", :display_address=>["1620 S Prairie Ave", "Pueblo, CO 81005"], :state=>"CO", :zip_code=>"81005"})
   end
 end

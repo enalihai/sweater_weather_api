@@ -3,14 +3,13 @@ require 'rails_helper'
 RSpec.describe 'Forecast Request' do
   describe 'GET /api/v1/forecast?location=?' do
     before :each do
-      loc_response = File.read('spec/fixtures/nashville_mapquest_response.json')
-      
+      # loc_response = File.read('spec/fixtures/nashville_mapquest_response.json'
       get '/api/v1/forecast?location=nashville,tn'
       
       @response = JSON.parse(response.body, symbolize_names: true)
     end
 
-    xit 'returns [:data] with keys [id,type,attributes]' do
+    it 'returns [:data] with keys [id,type,attributes]', :vcr do
       expect(@response).to be_successful
       expect(@response).to have_http_status 200
       
@@ -27,12 +26,12 @@ RSpec.describe 'Forecast Request' do
       expect(@response[:data][:attributes]).to be_a Hash
     end 
 
-    xit 'returns attributes via OpenWeather API' do
+    it 'returns attributes via OpenWeather API', :vcr do
       expect(@response[:data][:attributes]).to have_key :current_weather
       expect(@response[:data][:attributes]).to be_a Hash
     end
 
-    xit 'returns Current Weather data' do
+    it 'returns Current Weather data', :vcr do
       current_weather = @response[:data][:attributes][:current_weather]
       
       expect(current_weather).to have_key :datetime
@@ -66,7 +65,7 @@ RSpec.describe 'Forecast Request' do
       expect(current_weather[:icon]).to be_a String
     end
 
-    xit 'returns Daily Weather data' do
+    it 'returns Daily Weather data', :vcr do
       daily_weather = @response[:data][:attributes][:daily_weather]
 
       expect(daily_weather).to be_a Array
@@ -98,7 +97,7 @@ RSpec.describe 'Forecast Request' do
       end
     end 
 
-    xit 'returns Hourly Weather data' do
+    it 'returns Hourly Weather data', :vcr do
       hourly_weather = @response[:data][:attributes][:hourly_weather]
 
       expect(hourly_weather).to be_a Array
@@ -121,7 +120,7 @@ RSpec.describe 'Forecast Request' do
     end
   end
 
-  describe '#EDGECASE / Sad Path' do
+  describe '#EDGECASE / Sad Path', :vcr do
     it 'pairs down the Mapquest request'
     # fill in test during Poro creation
     it 'pairs down the OpenWeather request'

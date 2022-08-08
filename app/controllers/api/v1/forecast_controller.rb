@@ -3,7 +3,7 @@ class Api::V1::ForecastController < ApplicationController
   
   def index
     location = LocationFacade.get_location_coords(params[:location])
-    outlook = ForecastFacade.find_outlook(@location)
+    outlook = ForecastFacade.find_outlook(location)
 
     render json: ForecastSerializer.outlook_forecast(outlook)
   end

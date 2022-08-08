@@ -11,8 +11,9 @@ class MunchayaSerializer
                 "temperature": "#{pmd[1]}"
               },
               "restaurant": {
-                "name": "#{pmd[1]}",
-                "address": "#{pmd[1]}"
+                "name": "#{pmd[:businesses][0][:name]}",
+                "address": "#{pmd[:businesses][0][:location][:address_1]}"
+                # need to come back here and create a method to separate the full address
               }
             }
           }
