@@ -21,10 +21,10 @@ class MunchayaSerializer
 end
 
 
-{:address1=>"1620 S Prairie Ave", 
-  :address2=>nil, 
-  :address3=>nil, 
-  :city=>"Pueblo", 
-  :country=>"US", 
-  :display_address=>["1620 S Prairie Ave", "Pueblo, CO 81005"], 
-  :state=>"CO", :zip_code=>"81005"}
+# { :address1=>"1620 S Prairie Ave", 
+#   :address2=>nil, 
+#   :address3=>nil, 
+#   :city=>"Pueblo", 
+#   :country=>"US", 
+#   :display_address=>["1620 S Prairie Ave", "Pueblo, CO 81005"], 
+#   :state=>"CO", :zip_code=>"81005"}

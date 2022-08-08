@@ -31,7 +31,6 @@ class ForecastSerializer
             'icon': d[:icon]
             }
           end,
-
           'hourly_outlook': outlook.hourly_outlook.first(8).map do |h|
             {
               'time': h[:time],
