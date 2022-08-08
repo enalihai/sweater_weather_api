@@ -20,9 +20,6 @@ RSpec.describe Coordinate do
 
     expect(data).to be_a Hash
     expect(coords).to be_a Coordinate
-  
-    expect(coords.latLon).to be_a Hash
-    expect(coords.latLon).to eq({"lat": 36.166687, "lng": -86.779932})
     
     expect(coords.lat).to be_a Float
     expect(coords.lat).to eq 36.166687

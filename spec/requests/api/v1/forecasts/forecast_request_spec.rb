@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Forecast Request' do
   describe 'GET /api/v1/forecast?location=?' do
     before :each do
-      loc_response = File.read('/spec/fixtures/nashville_mapquest_response.json')
+      loc_response = File.read('spec/fixtures/nashville_mapquest_response.json')
       
       get '/api/v1/forecast?location=nashville,tn'
       

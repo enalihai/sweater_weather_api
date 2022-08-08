@@ -7,7 +7,9 @@ RSpec.describe ForecastService do
     stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall/?appid=f57e28372b23bcdc9e27700bd3fdd29a&exclude=minutely&lat=36.166687&lon=-86.779932&units=imperial")
       .to_return(status: 200, body: nashville_response, headers: {})
 
-    response = ForecastService.get_forecast_data({lat: 36.166687, lon: -86.779932})
+    coords = {:lat=>36.166687, :lon=>-86.779932}
+    query_params = Coordinate.new(coords)
+    response = ForecastService.get_forecast_data(query_params)
 
     expect(response).to be_a Hash
     expect(response).to have_key :current
