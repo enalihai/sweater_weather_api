@@ -1,5 +1,6 @@
 ## What this PR Covers  
-
+  
+  
 ## Type of Content in PR  
 
 - [ ] Spec Files
@@ -9,7 +10,9 @@
 - [ ] Gemfile Update
 - [ ] Other:  
 
+
 Is this a fully completed API Endpoint?  
+
 - [ ] yes - API Endpoint: 
 - [ ] no  
 
