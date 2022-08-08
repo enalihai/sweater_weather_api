@@ -1,6 +1,6 @@
 class YelpService
-  def self.search_for_business(search, time, location)
-    response = conn.get("/v3/businesses/search?term=#{search}&open_at=#{time}&location=#{location}") do |f|
+  def self.search_for_business(search, location)
+    response = conn.get("/v3/businesses/search?term=#{search}&location=#{location}") do |f|
       f.headers['Authorization'] = ENV['yelp_api_key']
     end
 
