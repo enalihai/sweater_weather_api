@@ -14,8 +14,8 @@ gem 'figaro'
 gem 'jsonapi-serializer'
 
 group :development, :test do
-  gem 'pry'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
   gem 'factory_bot_rails'
   gem 'faker'
 end
@@ -27,9 +27,9 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'webmock'
-  gem 'vcr'
   gem 'shoulda-matchers'
   gem 'simplecov'
+  # gem 'database_cleaner-active_record'
 end
 
 
