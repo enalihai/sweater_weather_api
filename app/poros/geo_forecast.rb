@@ -11,7 +11,4 @@ class GeoForecast
     @hourly_outlook = HourlyForecast.new(data[:hourly])
     @daily_outlook = DailyForecast.new(data[:daily])
   end
-
-  
-  end
 end
