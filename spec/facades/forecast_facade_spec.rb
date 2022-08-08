@@ -1,5 +1,5 @@
-require 'rails_helper'
+# require 'rails_helper'
 
-RSpec.describe ForecastFacade do
-  # some facade action to come
-end 
+# RSpec.describe ForecastFacade do
+#   # some facade action to come
+# end 

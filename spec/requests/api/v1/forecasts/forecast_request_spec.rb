@@ -126,7 +126,7 @@ RSpec.describe 'Forecast Request' do
     # to not include minutely / alerts
     # fill in test during Poro creation
     it 'returns error for invalid format'
-
+    # use webmock to make a bad json response
     it 'returns error when location input is invalid'
     # figure out how to break Mapquest geocoding
     it 'returns error when weather input is invalid'
