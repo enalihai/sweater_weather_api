@@ -3,14 +3,14 @@ require 'rails_helper'
 RSpec.describe YelpService do
   it 'gets a good response', :vcr do
     response = YelpService.conn
-    expect(response).to be_successful
+    expect(response).to be_a(Faraday::Connection)
   end
   
   it 'has data to parse in response', :vcr do
-    response = YelpsService.yelp_search('fast food', Time.now.to_i, "denver")
+    response = YelpsService.search_for_business('chinese', Time.now.to_i, "denver")
     expect(response).to be_a Hash
-    expect(response).to have_key :photos
-    expect(response).to have_key :page
-    expect(response).to have_key :per_page
+    expect(response).to have_key :businesses
+    expect(response).to have_key :region
+    expect(response).to have_key :total
   end
 end
