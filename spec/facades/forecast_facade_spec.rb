@@ -2,34 +2,60 @@ require 'rails_helper'
 
 RSpec.describe ForecastFacade do
   before :each do
-    # location = File.read('spec/fixtures/nashville_mapquest_response.json')
-    # weather = File.read('spec/fixtures/nashville_openweather_response.json')
-    
-    # stub_request(:get, "http://www.mapquestapi.com/geocoding/v1/address?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&location=nashville,tn")
-    #   .with(
-    #     headers: 
-    #       {
-    #           'Accept'=>'*/*',
-    #           'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-    #           'User-Agent'=>'Faraday v2.4.0'
-    #           })
-    #   .to_return(status: 200, body: location, headers: {})
-    
-    # stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall/?appid=f57e28372b23bcdc9e27700bd3fdd29a&exclude=minutely&lat=36.166687&lon=-86.779932&units=imperial")
-    #   .with(
-    #        headers: {
-    #    	  'Accept'=>'*/*',
-    #    	  'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-    #    	  'User-Agent'=>'Faraday v2.4.0'
-    #        })
-    #   .to_return(status: 200, body: weather, headers: {})
+    @data = [
+      {:providedLocation=>{:location=>"Pueblo,CO"},
+       :locations=>[
+        {:street=>"",
+            :adminArea6=>"",
+            :adminArea6Type=>"Neighborhood",
+            :adminArea5=>"Pueblo",
+            :adminArea5Type=>"City",
+            :adminArea4=>"Pueblo County",
+            :adminArea4Type=>"County",
+            :adminArea3=>"CO",
+            :adminArea3Type=>"State",
+            :adminArea1=>"US",
+            :adminArea1Type=>"Country",
+            :postalCode=>"",
+            :geocodeQualityCode=>"A5XAX",
+            :geocodeQuality=>"CITY",
+            :dragPoint=>false,
+            :sideOfStreet=>"N",
+            :linkId=>"282040865",
+            :unknownInput=>"",
+            :type=>"s",
+            :latLng=>{:lat=>38.265425, :lng=>-104.610415},
+            :displayLatLng=>{:lat=>38.265425, :lng=>-104.610415},
+            :mapUrl=>
+              "http://www.mapquestapi.com/staticmap/v5/map?"},
+            {:street=>"",
+              :adminArea6=>"",
+              :adminArea6Type=>"Neighborhood",
+              :adminArea5=>"",
+              :adminArea5Type=>"City",
+              :adminArea4=>"Pueblo County",
+              :adminArea4Type=>"County",
+              :adminArea3=>"CO",
+              :adminArea3Type=>"State",
+              :adminArea1=>"US",
+              :adminArea1Type=>"Country",
+              :postalCode=>"",
+              :geocodeQualityCode=>"A4XAX",
+              :geocodeQuality=>"COUNTY",
+              :dragPoint=>false,
+              :sideOfStreet=>"N",
+              :linkId=>"282932014",
+              :unknownInput=>"",
+              :type=>"s",
+              :latLng=>{:lat=>38.265425, :lng=>-104.610415},
+              :displayLatLng=>{:lat=>38.265425, :lng=>-104.610415},
+              :mapUrl=>
+                "http://www.mapquestapi.com/staticmap/v5/map?key=ERsN8MepXYCIcFKsTwHRDP5muyWI5wPJ&type=map&size=225,160&locations=38.265425,-104.610415%7Cmarker-sm-50318A-2
+                &scalebar=true&zoom=9&rand=280884538"}]}]
   end
   
-  describe 'class methods' do 
-    it '.find_outlook(city)', :vcr do
-      forecast = ForecastFacade.find_outlook('nashville,tn')
-
-      expect(forecast).to be_a GeoForecast
-    end
-  end 
+  it '.find_outlook(city)', :vcr do
+    forecast = ForecastFacade.find_outlook(@data)
+    expect(forecast).to be_a GeoForecast
+  end
 end 
