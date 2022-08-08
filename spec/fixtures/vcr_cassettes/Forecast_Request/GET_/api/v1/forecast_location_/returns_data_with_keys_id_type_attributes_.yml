@@ -19,11 +19,11 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 08 Aug 2022 18:53:49 GMT
+      - Mon, 08 Aug 2022 19:05:08 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '1036'
+      - '1037'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Mon, 08 Aug 2022 18:53:49 GMT
+      - Mon, 08 Aug 2022 19:05:08 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=BDAB91CBF487972732D8550E896ED6FF; Path=/; HttpOnly
+      - JSESSIONID=7152E0A40A437783DB1E6CE86B2DF10E; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -51,11 +51,11 @@ http_interactions:
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
         2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"nashville,tn"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Nashville","adminArea5Type":"City","adminArea4":"Davidson
-        County","adminArea4Type":"County","adminArea3":"TN","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282087490","unknownInput":"","type":"s","latLng":{"lat":36.166687,"lng":-86.779932},"displayLatLng":{"lat":36.166687,"lng":-86.779932},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=36.166687,-86.779932|marker-sm-50318A-1&scalebar=true&zoom=12&rand=654432631"}]}]}'
-  recorded_at: Mon, 08 Aug 2022 18:53:49 GMT
+        County","adminArea4Type":"County","adminArea3":"TN","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282087490","unknownInput":"","type":"s","latLng":{"lat":36.166687,"lng":-86.779932},"displayLatLng":{"lat":36.166687,"lng":-86.779932},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=36.166687,-86.779932|marker-sm-50318A-1&scalebar=true&zoom=12&rand=1247070517"}]}]}'
+  recorded_at: Mon, 08 Aug 2022 19:05:08 GMT
 - request:
     method: get
-    uri: http://www.mapquestapi.com/geocoding/v1/address?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&location=%23%3CCoordinate:0x000000013b172b40%3E
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&location=%23%3CCoordinate:0x000000013386b170%3E
     body:
       encoding: US-ASCII
       string: ''
@@ -72,11 +72,11 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 08 Aug 2022 18:53:50 GMT
+      - Mon, 08 Aug 2022 19:05:08 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '7478'
+      - '1034'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -88,13 +88,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Mon, 08 Aug 2022 18:53:50 GMT
+      - Mon, 08 Aug 2022 19:05:08 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=F1D7E6FF3D1631F3F7A0A6E6DE86A7D6; Path=/; HttpOnly
+      - JSESSIONID=8A4F73A28B701006C0AF1B030EDD22AA; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -103,23 +103,11 @@ http_interactions:
       encoding: UTF-8
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
-        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"#<Coordinate:0x000000013b172b40>"},"locations":[{"street":"Avenida
-        01-JI 40","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Rio
-        Claro","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"S\u00E3o
-        Paulo","adminArea3Type":"State","adminArea1":"BR","adminArea1Type":"Country","postalCode":"13502","geocodeQualityCode":"P1CCA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"N","linkId":"BR/PAD/p0/17711202","unknownInput":"","type":"s","latLng":{"lat":-22.42928,"lng":-47.57893},"displayLatLng":{"lat":-22.42928,"lng":-47.57893},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=-22.42928,-47.57893|marker-sm-50318A-1&scalebar=true&zoom=15&rand=-325815423"},{"street":"08015.
-        Cadde 40","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Gaziantep","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"TR","adminArea1Type":"Country","postalCode":"27580","geocodeQualityCode":"P1CCA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"N","linkId":"TR/PAD/p0/2294150","unknownInput":"","type":"s","latLng":{"lat":37.0928,"lng":37.42394},"displayLatLng":{"lat":37.0928,"lng":37.42394},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=37.0928,37.42394|marker-sm-50318A-2&scalebar=true&zoom=15&rand=1956805073"},{"street":"03012.
-        Sokak 40","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Gaziantep","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"TR","adminArea1Type":"Country","postalCode":"27580","geocodeQualityCode":"P1CCA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"N","linkId":"TR/PAD/p0/2305354","unknownInput":"","type":"s","latLng":{"lat":37.07606,"lng":37.40513},"displayLatLng":{"lat":37.07606,"lng":37.40513},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=37.07606,37.40513|marker-sm-50318A-3&scalebar=true&zoom=15&rand=-732939804"},{"street":"06071.
-        Sokak 40","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Gaziantep","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"TR","adminArea1Type":"Country","postalCode":"27580","geocodeQualityCode":"P1CCA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"N","linkId":"TR/PAD/p0/2316448","unknownInput":"","type":"s","latLng":{"lat":37.09764,"lng":37.43191},"displayLatLng":{"lat":37.09764,"lng":37.43191},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=37.09764,37.43191|marker-sm-50318A-4&scalebar=true&zoom=15&rand=195357946"},{"street":"03016.
-        Sokak 40","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Gaziantep","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"TR","adminArea1Type":"Country","postalCode":"27580","geocodeQualityCode":"P1CCA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"N","linkId":"TR/PAD/p0/2336362","unknownInput":"","type":"s","latLng":{"lat":37.0772,"lng":37.40631},"displayLatLng":{"lat":37.0772,"lng":37.40631},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=37.0772,37.40631|marker-sm-50318A-5&scalebar=true&zoom=15&rand=-340321396"},{"street":"08023.
-        Cadde 40","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Gaziantep","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"TR","adminArea1Type":"Country","postalCode":"27580","geocodeQualityCode":"P1CCA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"N","linkId":"TR/PAD/p0/2347494","unknownInput":"","type":"s","latLng":{"lat":37.09257,"lng":37.4211},"displayLatLng":{"lat":37.09257,"lng":37.4211},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=37.09257,37.4211|marker-sm-50318A-6&scalebar=true&zoom=15&rand=-1306676059"},{"street":"07039.
-        Sokak 40","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Gaziantep","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"TR","adminArea1Type":"Country","postalCode":"27500","geocodeQualityCode":"P1CCA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"N","linkId":"TR/PAD/p0/2374660","unknownInput":"","type":"s","latLng":{"lat":37.08429,"lng":37.3707},"displayLatLng":{"lat":37.08429,"lng":37.3707},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=37.08429,37.3707|marker-sm-50318A-7&scalebar=true&zoom=15&rand=1274973109"},{"street":"07044.
-        Sokak 40","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Gaziantep","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"TR","adminArea1Type":"Country","postalCode":"27500","geocodeQualityCode":"P1CCA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"N","linkId":"TR/PAD/p0/2392877","unknownInput":"","type":"s","latLng":{"lat":37.08365,"lng":37.37008},"displayLatLng":{"lat":37.08365,"lng":37.37008},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=37.08365,37.37008|marker-sm-50318A-8&scalebar=true&zoom=15&rand=-211559739"},{"street":"08018.
-        Sokak 40","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Gaziantep","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"TR","adminArea1Type":"Country","postalCode":"27580","geocodeQualityCode":"P1CCA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"N","linkId":"TR/PAD/p0/2409312","unknownInput":"","type":"s","latLng":{"lat":37.09469,"lng":37.42459},"displayLatLng":{"lat":37.09469,"lng":37.42459},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=37.09469,37.42459|marker-sm-50318A-9&scalebar=true&zoom=15&rand=347768563"},{"street":"02018.
-        Cadde 40","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Gaziantep","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"TR","adminArea1Type":"Country","postalCode":"27580","geocodeQualityCode":"P1CCA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"N","linkId":"TR/PAD/p0/2415374","unknownInput":"","type":"s","latLng":{"lat":37.09206,"lng":37.42558},"displayLatLng":{"lat":37.09206,"lng":37.42558},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=37.09206,37.42558|marker-sm-50318A-10&scalebar=true&zoom=15&rand=-436683299"}]}]}'
-  recorded_at: Mon, 08 Aug 2022 18:53:50 GMT
+        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"#<Coordinate:0x000000013386b170>"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A1XAX","geocodeQuality":"COUNTRY","dragPoint":false,"sideOfStreet":"N","linkId":"282934758","unknownInput":"","type":"s","latLng":{"lat":39.390897,"lng":-99.066067},"displayLatLng":{"lat":39.390897,"lng":-99.066067},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=39.390897,-99.066067|marker-sm-50318A-1&scalebar=true&zoom=2&rand=-1906622469"}]}]}'
+  recorded_at: Mon, 08 Aug 2022 19:05:08 GMT
 - request:
     method: get
-    uri: https://api.openweathermap.org/data/2.5/onecall/?appid=f57e28372b23bcdc9e27700bd3fdd29a&exclude=minutely&lat=-22.42928&lon=-47.57893&units=imperial
+    uri: https://api.openweathermap.org/data/2.5/onecall/?appid=f57e28372b23bcdc9e27700bd3fdd29a&exclude=minutely&lat=39.390897&lon=-99.066067&units=imperial
     body:
       encoding: US-ASCII
       string: ''
@@ -138,7 +126,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 08 Aug 2022 18:53:50 GMT
+      - Mon, 08 Aug 2022 19:05:09 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -146,7 +134,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-Cache-Key:
-      - "/data/2.5/onecall/?exclude=minutely&lat=-22.43&lon=-47.58&units=imperial"
+      - "/data/2.5/onecall/?exclude=minutely&lat=39.39&lon=-99.07&units=imperial"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -156,5 +144,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"cod":"404","message":"Internal error"}'
-  recorded_at: Mon, 08 Aug 2022 18:53:50 GMT
+  recorded_at: Mon, 08 Aug 2022 19:05:09 GMT
 recorded_with: VCR 6.1.0

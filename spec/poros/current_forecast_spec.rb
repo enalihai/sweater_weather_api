@@ -27,7 +27,7 @@ RSpec.describe CurrentForecast do
         ]
     }}
 
-    cf = CurrentForecast.new(current_data)
+    cf = CurrentForecast.new(current_data[:current])
 
     expect(cf).to be_a CurrentForecast
     expect(cf.datetime).to be_a String
