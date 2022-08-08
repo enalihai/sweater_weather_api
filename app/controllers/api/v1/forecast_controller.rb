@@ -2,6 +2,7 @@ class Api::V1::ForecastController < ApplicationController
   # before_action :confirm_coords_input 
   
   def index
+    binding.pry
     location = LocationFacade.get_location_coords(params[:location])
     outlook = ForecastFacade.find_outlook(location)
 

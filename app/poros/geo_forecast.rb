@@ -5,9 +5,9 @@ class GeoForecast
 
   def initialize(data)
 
-    @current_forecast = current_forecast(data[:current])
-    @hourly_forecast = hourly_forecast(data[:hourly])
-    @daily_forecast = daily_forecast(data[:daily])
+    @current_forecast = current_forecast(data[:current_weather])
+    @hourly_forecast = hourly_forecast(data[:hourly_weather])
+    @daily_forecast = daily_forecast(data[:daily_weather])
   end
 
   def self.current_forecast(data)
