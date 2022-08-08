@@ -7,7 +7,7 @@ RSpec.describe YelpService do
   end
   
   it 'has data to parse in response', :vcr do
-    response = YelpService.search_for_business('chinese', Time.now.to_i, "denver")
+    response = YelpService.search_for_business('chinese', 'pueblo,co')
     expect(response).to be_a Hash
     expect(response).to have_key :businesses
     expect(response).to have_key :total
