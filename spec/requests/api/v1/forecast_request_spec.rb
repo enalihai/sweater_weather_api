@@ -1,39 +1,43 @@
 require 'rails_helper'
 
 RSpec.describe 'Forecast Request' do
-  describe 'GET /api/v1/forecast?location=?' do
-    before :each do
-      loc_response = File.read('spec/fixtures/nashville_mapquest_response.json')
+  describe 'GET /api/v1/forecast?location=?' do  
+    it 'returns [:data] with keys [id,type,attributes]', :vcr do
+      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json'}
+      location = 'miami,fl'
       
-      get '/api/v1/forecast?location=nashville,tn'
+      get '/api/v1/forecast', headers: headers, params: { location: location }
       
-      @response = JSON.parse(response.body, symbolize_names: true)
-    end
+      expect(response).to be_successful
+      expect(response).to have_http_status 200
 
-    xit 'returns [:data] with keys [id,type,attributes]' do
-      expect(@response).to be_successful
-      expect(@response).to have_http_status 200
+      forecast = JSON.parse(response.body, symbolize_names: true)
       
-      expect(@response).to have_key :data
-      expect(@response[:data]).to be_a Hash
+      expect(forecast).to have_key :data
+      expect(forecast[:data]).to be_a Hash
 
-      expect(@response[:data]).to have_key :id
-      expect(@response[:data][:id]).to be_nil
+      expect(forecast[:data]).to have_key :id
+      expect(forecast[:data][:id]).to be_nil
       
-      expect(@response[:data]).to have_key :type
-      expect(@response[:data][:type]).to eq 'forecast'
+      expect(forecast[:data]).to have_key :type
+      expect(forecast[:data][:type]).to eq 'forecast'
 
-      expect(@response[:data]).to have_key :attributes
-      expect(@response[:data][:attributes]).to be_a Hash
+      expect(forecast[:data]).to have_key :attributes
+      expect(forecast[:data][:attributes]).to be_a Hash
     end 
 
-    xit 'returns attributes via OpenWeather API' do
-      expect(@response[:data][:attributes]).to have_key :current_weather
-      expect(@response[:data][:attributes]).to be_a Hash
-    end
+    it 'returns attributes via OpenWeather API', :vcr do
+      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json'}
+      location = 'miami,fl'
+      
+      get '/api/v1/forecast', headers: headers, params: { location: location }
+      
+      openweather_api = JSON.parse(response.body, symbolize_names: true)
 
-    xit 'returns Current Weather data' do
-      current_weather = @response[:data][:attributes][:current_weather]
+      expect(openweather_api[:data][:attributes]).to have_key :current_weather
+      expect(openweather_api[:data][:attributes]).to be_a Hash
+   
+      current_weather = openweather_api[:data][:attributes][:current_weather]
       
       expect(current_weather).to have_key :datetime
       expect(current_weather[:datetime]).to be_a String
@@ -51,13 +55,13 @@ RSpec.describe 'Forecast Request' do
       expect(current_weather[:feels_like]).to be_a Float
 
       expect(current_weather).to have_key :humidity
-      expect(current_weather[:humidity]).to be_a Float || Integer
+      expect(current_weather[:humidity]).is_a? Numeric
 
       expect(current_weather).to have_key :uvi
-      expect(current_weather[:uvi]).to be_a Float || Integer
+      expect(current_weather[:uvi]).is_a? Numeric
 
       expect(current_weather).to have_key :visibility
-      expect(current_weather[:visibility]).to be_a Float || Integer
+      expect(current_weather[:visibility]).is_a? Numeric
 
       expect(current_weather).to have_key :conditions
       expect(current_weather[:conditions]).to be_a String
@@ -66,11 +70,18 @@ RSpec.describe 'Forecast Request' do
       expect(current_weather[:icon]).to be_a String
     end
 
-    xit 'returns Daily Weather data' do
-      daily_weather = @response[:data][:attributes][:daily_weather]
+    it 'returns Daily Weather data', :vcr do
+      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json'}
+      location = 'miami,fl'
+      
+      get '/api/v1/forecast', headers: headers, params: { location: location }
+
+      daily = JSON.parse(response.body, symbolize_names: true)
+
+      daily_weather = daily[:data][:attributes][:daily_weather]
 
       expect(daily_weather).to be_a Array
-      expect(daily_weather.count).to eq 5
+      expect(daily_weather.count).to eq 8
     
       daily_weather.each do |day|
         expect(day).to be_a Hash
@@ -98,8 +109,15 @@ RSpec.describe 'Forecast Request' do
       end
     end 
 
-    xit 'returns Hourly Weather data' do
-      hourly_weather = @response[:data][:attributes][:hourly_weather]
+    it 'returns Hourly Weather data', :vcr do
+      headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json'}
+      location = 'miami,fl'
+      
+      get '/api/v1/forecast', headers: headers, params: { location: location }
+
+      hourly = JSON.parse(response.body, symbolize_names: true)
+
+      hourly_weather = hourly[:data][:attributes][:hourly_weather]
 
       expect(hourly_weather).to be_a Array
       expect(hourly_weather.count).to eq 8
