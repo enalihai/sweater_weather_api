@@ -14,6 +14,7 @@ RSpec.describe User, type: :model do
       )
 
       expect(user).to_not have_key :password
+      expect(user).to have_key :password_digest
       expect(user.password_digest).to_not eq('five')
     end
   end 
