@@ -1,39 +1,41 @@
 require 'rails_helper'
 
 RSpec.describe 'Forecast Request' do
-  describe 'GET /api/v1/forecast?location=?' do
-    before :each do
-      loc_response = File.read('spec/fixtures/nashville_mapquest_response.json')
-      
+  describe 'GET /api/v1/forecast?location=?' do  
+    it 'returns [:data] with keys [id,type,attributes]', :vcr do
       get '/api/v1/forecast?location=nashville,tn'
+      response = JSON.parse(response.body, symbolize_names: true)
       
-      @response = JSON.parse(response.body, symbolize_names: true)
-    end
-
-    xit 'returns [:data] with keys [id,type,attributes]' do
-      expect(@response).to be_successful
-      expect(@response).to have_http_status 200
       
-      expect(@response).to have_key :data
-      expect(@response[:data]).to be_a Hash
-
-      expect(@response[:data]).to have_key :id
-      expect(@response[:data][:id]).to be_nil
+      expect(response).to be_successful
+      expect(response).to have_http_status 200
       
-      expect(@response[:data]).to have_key :type
-      expect(@response[:data][:type]).to eq 'forecast'
+      expect(response).to have_key :data
+      expect(response[:data]).to be_a Hash
 
-      expect(@response[:data]).to have_key :attributes
-      expect(@response[:data][:attributes]).to be_a Hash
+      expect(response[:data]).to have_key :id
+      expect(response[:data][:id]).to be_nil
+      
+      expect(response[:data]).to have_key :type
+      expect(response[:data][:type]).to eq 'forecast'
+
+      expect(response[:data]).to have_key :attributes
+      expect(response[:data][:attributes]).to be_a Hash
     end 
 
-    xit 'returns attributes via OpenWeather API' do
-      expect(@response[:data][:attributes]).to have_key :current_weather
-      expect(@response[:data][:attributes]).to be_a Hash
+    it 'returns attributes via OpenWeather API', :vcr do
+      get '/api/v1/forecast?location=nashville,tn'
+      response = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response[:data][:attributes]).to have_key :current_weather
+      expect(response[:data][:attributes]).to be_a Hash
     end
 
-    xit 'returns Current Weather data' do
-      current_weather = @response[:data][:attributes][:current_weather]
+    it 'returns Current Weather data', :vcr do
+      get '/api/v1/forecast?location=nashville,tn'
+      response = JSON.parse(response.body, symbolize_names: true)
+
+      current_weather = response[:data][:attributes][:current_weather]
       
       expect(current_weather).to have_key :datetime
       expect(current_weather[:datetime]).to be_a String
@@ -66,8 +68,11 @@ RSpec.describe 'Forecast Request' do
       expect(current_weather[:icon]).to be_a String
     end
 
-    xit 'returns Daily Weather data' do
-      daily_weather = @response[:data][:attributes][:daily_weather]
+    it 'returns Daily Weather data', :vcr do
+      get '/api/v1/forecast?location=nashville,tn'
+      response = JSON.parse(response.body, symbolize_names: true)
+
+      daily_weather = response[:data][:attributes][:daily_weather]
 
       expect(daily_weather).to be_a Array
       expect(daily_weather.count).to eq 5
@@ -98,8 +103,11 @@ RSpec.describe 'Forecast Request' do
       end
     end 
 
-    xit 'returns Hourly Weather data' do
-      hourly_weather = @response[:data][:attributes][:hourly_weather]
+    it 'returns Hourly Weather data', :vcr do
+      get '/api/v1/forecast?location=nashville,tn'
+      response = JSON.parse(response.body, symbolize_names: true)
+
+      hourly_weather = response[:data][:attributes][:hourly_weather]
 
       expect(hourly_weather).to be_a Array
       expect(hourly_weather.count).to eq 8
@@ -121,17 +129,17 @@ RSpec.describe 'Forecast Request' do
     end
   end
 
-  describe '#EDGECASE / Sad Path' do
-    it 'pairs down the Mapquest request'
-    # fill in test during Poro creation
-    it 'pairs down the OpenWeather request'
-    # to not include minutely / alerts
-    # fill in test during Poro creation
-    it 'returns error for invalid format'
-    # use webmock to make a bad json response
-    it 'returns error when location input is invalid'
-    # figure out how to break Mapquest geocoding
-    it 'returns error when weather input is invalid'
-    # figure out how to break OpenWeather API
-  end
+  # describe '#EDGECASE / Sad Path' do
+  #   it 'pairs down the Mapquest request'
+  #   # fill in test during Poro creation
+  #   it 'pairs down the OpenWeather request'
+  #   # to not include minutely / alerts
+  #   # fill in test during Poro creation
+  #   it 'returns error for invalid format'
+  #   # use webmock to make a bad json response
+  #   it 'returns error when location input is invalid'
+  #   # figure out how to break Mapquest geocoding
+  #   it 'returns error when weather input is invalid'
+  #   # figure out how to break OpenWeather API
+  # end
 end

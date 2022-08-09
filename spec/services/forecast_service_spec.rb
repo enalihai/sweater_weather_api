@@ -1,15 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe ForecastService do
-  it 'returns a forecast' do
-    nashville_response = File.read('spec/fixtures/nashville_openweather_response.json')
-
-    stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall/?appid=f57e28372b23bcdc9e27700bd3fdd29a&exclude=minutely&lat=36.166687&lon=-86.779932&units=imperial")
-      .to_return(status: 200, body: nashville_response, headers: {})
-
-    coords = {:lat=>36.166687, :lon=>-86.779932}
-    query_params = Coordinate.new(coords)
-    response = ForecastService.get_forecast_data(query_params)
+  it 'returns a forecast', :vcr do
+    lat = 39.738453
+    lon = -104.984853
+    response = ForecastService.get_forecast_data(lat, lon)
 
     expect(response).to be_a Hash
     expect(response).to have_key :current
