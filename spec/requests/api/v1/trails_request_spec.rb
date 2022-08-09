@@ -24,7 +24,5 @@ RSpec.describe 'Accessible-Trails Request' do
 
     expect(trails_request[:data]).to have_key :attributes
     expect(trails_request[:data][:attributes]).to be_a Hash
-  
-    
   end
 end

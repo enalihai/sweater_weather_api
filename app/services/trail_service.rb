@@ -5,6 +5,8 @@ class TrailService
       f.params[:count] = quantity
       f.params[:offset] = 0
     end
+
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def self.conn

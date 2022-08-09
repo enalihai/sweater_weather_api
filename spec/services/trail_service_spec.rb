@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Trail Service' do
   it 'uses Prescription Trails API for nearby trails' do
-    response = TrailService.get_trail_data('Albuquerque')
+    response = TrailService.get_trail_data('Albuquerque', 5)
 
     expect(response).to be_a Hash
     expect(response).to have_key :trails
@@ -11,7 +11,7 @@ RSpec.describe 'Trail Service' do
   end
 
   it 'has specific trail information' do
-    response = TrailService.get_trail_data('Albuquerque')
+    response = TrailService.get_trail_data('Albuquerque', 5)
     trails = response[:trails][0]
 
     expect(trail).to have_key :id
