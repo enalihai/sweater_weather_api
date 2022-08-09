@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GeoForecast
   attr_reader :current_forecast,
               :hourly_forecast,
@@ -37,7 +39,7 @@ class GeoForecast
   #       conditions: d[:weather][0][:description],
   #       icon: day[:weather][0][:icon]
   #     }
-  #   end 
+  #   end
   # end
 
   # def self.hourly_weather(@hourly_forecast)
@@ -52,42 +54,42 @@ class GeoForecast
   #   end
   # end
 end
-  # def self.current_weather(data)
-  #   {
-  #   datetime: Time.at(data[:dt].strftime('%D')),
-  #   sunrise: Time.at(data[:sunrise]),
-  #   sunset: Time.at(data[:sunset]),
-  #   temperature: data[:temp],
-  #   feels_like: data[:feels_like],
-  #   humidity: data[:humidity],
-  #   uvi: data[:uvi],
-  #   visibility: data[:visibility],
-  #   conditions: data[:weather][0][:description],
-  #   icon: data[:weather][0][:icon]
-  #   }
-  # end
+# def self.current_weather(data)
+#   {
+#   datetime: Time.at(data[:dt].strftime('%D')),
+#   sunrise: Time.at(data[:sunrise]),
+#   sunset: Time.at(data[:sunset]),
+#   temperature: data[:temp],
+#   feels_like: data[:feels_like],
+#   humidity: data[:humidity],
+#   uvi: data[:uvi],
+#   visibility: data[:visibility],
+#   conditions: data[:weather][0][:description],
+#   icon: data[:weather][0][:icon]
+#   }
+# end
 
-  # def self.hourly_weather(data)
-  #   data.map do |hour|
-  #     {
-  #     time: Time.at(hour[:dt]),
-  #     temperature: hour[:temp],
-  #     conditions: hour[:weather][:description],
-  #     icon: hour[:weather][:icon]
-  #     }
-  #   end
-  # end
+# def self.hourly_weather(data)
+#   data.map do |hour|
+#     {
+#     time: Time.at(hour[:dt]),
+#     temperature: hour[:temp],
+#     conditions: hour[:weather][:description],
+#     icon: hour[:weather][:icon]
+#     }
+#   end
+# end
 
-  # def self.daily_weather(data)
-  #   data.map do |day|
-  #     {
-  #     date: Time.at(day[:dt]).strftime('%D'),
-  #     sunrise: Time.at(day[:sunrise]),
-  #     sunset: Time.at(day[:sunset]),
-  #     max_temp: day[:temp][:max],
-  #     min_temp: day[:temp][:min],
-  #     conditions: day[:weather][0][:description],
-  #     icon: day[:weather][0][:icon]
-  #     }
-  #   end
-  # end
+# def self.daily_weather(data)
+#   data.map do |day|
+#     {
+#     date: Time.at(day[:dt]).strftime('%D'),
+#     sunrise: Time.at(day[:sunrise]),
+#     sunset: Time.at(day[:sunset]),
+#     max_temp: day[:temp][:max],
+#     min_temp: day[:temp][:min],
+#     conditions: day[:weather][0][:description],
+#     icon: day[:weather][0][:icon]
+#     }
+#   end
+# end

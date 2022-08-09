@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # require 'rails_helper'
 
 # RSpec.describe GeoForecast do
@@ -534,7 +535,7 @@
 #             "uvi": 10
 #         }
 #     ]}
-    
+
 #     geo_forecast = GeoForecast.new(data)
 
 #     expect(geo_forecast).to be_a GeoForecast
@@ -549,7 +550,7 @@
 #     expect(geo_forecast.current_forecast).to have_key :visibility
 #     expect(geo_forecast.current_forecast).to have_key :conditions
 #     expect(geo_forecast.current_forecast).to have_key :icon
-    
+
 #     expect(geo_forecast.daily_forecast).to be_a Array
 #     geo_forecast.daily_forecast.each do |d|
 #       expect(d).to be_a Hash
@@ -561,7 +562,7 @@
 #       expect(d).to have_key :conditions
 #       expect(d).to have_key :icon
 #     end
-    
+
 #     expect(geo_forecast.hourly_forecast).to be_a Array
 #     geo_forecast.hourly_forecast.each do |h|
 #       expect(h).to be_a Hash
@@ -570,5 +571,5 @@
 #       expect(h).to have_key :conditions
 #       expect(h).to have_key :icon
 #     end
-#   end 
+#   end
 # end

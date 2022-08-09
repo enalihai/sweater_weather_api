@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe ForecastService do
@@ -12,4 +14,4 @@ RSpec.describe ForecastService do
     expect(response).to have_key :daily
     expect(response).to_not have_key :minutely
   end
-end 
+end

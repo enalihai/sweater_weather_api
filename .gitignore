@@ -27,3 +27,6 @@
 
 # Ignore SimpleCov Files
 coverage
+
+# Add vcr_cassettes here so it doesnt mess with simplecov. remove when wanting to push it up
+spec/fixtures/vcr_cassettes
