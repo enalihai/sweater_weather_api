@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ForecastService
   def self.get_forecast_data(lat, lon)
     response = conn.get('/data/2.5/onecall') do |f|

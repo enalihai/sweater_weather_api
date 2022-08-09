@@ -1,44 +1,46 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Forecast Request' do
-  describe 'GET /api/v1/forecast?location=?' do  
+  describe 'GET /api/v1/forecast?location=?' do
     it 'returns [:data] with keys [id,type,attributes]', :vcr do
-      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json'}
+      headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
       location = 'miami,fl'
-      
+
       get '/api/v1/forecast', headers: headers, params: { location: location }
-      
+
       expect(response).to be_successful
       expect(response).to have_http_status 200
 
       forecast = JSON.parse(response.body, symbolize_names: true)
-      
+
       expect(forecast).to have_key :data
       expect(forecast[:data]).to be_a Hash
 
       expect(forecast[:data]).to have_key :id
       expect(forecast[:data][:id]).to be_nil
-      
+
       expect(forecast[:data]).to have_key :type
       expect(forecast[:data][:type]).to eq 'forecast'
 
       expect(forecast[:data]).to have_key :attributes
       expect(forecast[:data][:attributes]).to be_a Hash
-    end 
+    end
 
     it 'returns attributes via OpenWeather API', :vcr do
-      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json'}
+      headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
       location = 'miami,fl'
-      
+
       get '/api/v1/forecast', headers: headers, params: { location: location }
-      
+
       openweather_api = JSON.parse(response.body, symbolize_names: true)
 
       expect(openweather_api[:data][:attributes]).to have_key :current_weather
       expect(openweather_api[:data][:attributes]).to be_a Hash
-   
+
       current_weather = openweather_api[:data][:attributes][:current_weather]
-      
+
       expect(current_weather).to have_key :datetime
       expect(current_weather[:datetime]).to be_a String
 
@@ -71,9 +73,9 @@ RSpec.describe 'Forecast Request' do
     end
 
     it 'returns Daily Weather data', :vcr do
-      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json'}
+      headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
       location = 'miami,fl'
-      
+
       get '/api/v1/forecast', headers: headers, params: { location: location }
 
       daily = JSON.parse(response.body, symbolize_names: true)
@@ -82,7 +84,7 @@ RSpec.describe 'Forecast Request' do
 
       expect(daily_weather).to be_a Array
       expect(daily_weather.count).to eq 8
-    
+
       daily_weather.each do |day|
         expect(day).to be_a Hash
 
@@ -91,7 +93,7 @@ RSpec.describe 'Forecast Request' do
 
         expect(day).to have_key :sunrise
         expect(day[:sunrise]).to be_a String
-        
+
         expect(day).to have_key :sunset
         expect(day[:sunset]).to be_a String
 
@@ -107,12 +109,12 @@ RSpec.describe 'Forecast Request' do
         expect(day).to have_key :icon
         expect(day[:icon]).to be_a String
       end
-    end 
+    end
 
     it 'returns Hourly Weather data', :vcr do
-      headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json'}
+      headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
       location = 'miami,fl'
-      
+
       get '/api/v1/forecast', headers: headers, params: { location: location }
 
       hourly = JSON.parse(response.body, symbolize_names: true)
@@ -125,7 +127,7 @@ RSpec.describe 'Forecast Request' do
       hourly_weather.each do |hour|
         expect(hour).to have_key :time
         expect(hour[:time]).to be_a String
-        
+
         expect(hour).to have_key :temperature
         expect(hour[:temperature]).to be_a Float
         # check to see if imperial
