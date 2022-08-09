@@ -12,10 +12,10 @@ RSpec.describe User, type: :model do
         password: 'five', 
         password_confirmation: 'five'
       )
-
-      expect(user).to_not have_key :password
-      expect(user).to have_key :password_digest
-      expect(user.password_digest).to_not eq('five')
+binding.pry
+      expect(user.id).to be_a Integer
+      expect(user.email).to eq 'model@test.com'
+      expect(user.password_digest).to_not eq 'five'
     end
   end 
 end

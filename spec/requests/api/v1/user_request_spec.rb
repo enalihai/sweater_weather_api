@@ -11,7 +11,7 @@ RSpec.describe 'User Request' do
       'password_confirmation': 'abc123'
     }
 
-    post 'api/v1/users', headers: headers, params: JSON.generate(new_user)
+    post '/api/v1/users', headers: headers, params: JSON.generate(new_user)
 
     expect(response).to be_successful
     expect(response).to have_http_status 201
