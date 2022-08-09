@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'Accessible-Trails Request' do
   it 'returns a json payload', :vcr do
-    headers = {'CONTENT_TYPE' => 'application/json'}
+    headers = { 'CONTENT_TYPE' => 'application/json' }
     city = 'Albuquerque'
     quantity = 5
 
-    get '/api/v1/accessible-trails', headers: headers, params: { city: city, quantity: quantity}
+    get '/api/v1/accessible-trails', headers: headers, params: { city: city, quantity: quantity }
 
     expect(response).to be_successful
     expect(response).to have_http_status 200

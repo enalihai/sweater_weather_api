@@ -1,18 +1,18 @@
 class TrailSerializer
   def self.trail_info(forecast, trails, city)
     {
-      "data": 
+      "data":
       {
         "id": nil,
-        "type": "trails",
-        "attributes": 
+        "type": 'trails',
+        "attributes":
         {
           "city": city,
-          "forecast": 
+          "forecast":
             {
-            "summary": forecast[:weather][0][:description],
-            "temperature":  forecast[:temp]
-          },
+              "summary": forecast[:weather][0][:description],
+              "temperature": forecast[:temp]
+            },
           "trails": trails.map do |trail|
             {
               "id": trail.id,
@@ -26,7 +26,7 @@ class TrailSerializer
                   "steps": loop_specs[1][:steps]
                 }
               end
-              }
+            }
           end
         }
       }
