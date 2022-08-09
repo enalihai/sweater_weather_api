@@ -58,7 +58,7 @@ RSpec.describe Coordinate do
           }
 
     coords = Coordinate.new(data)
-
+    
     expect(data).to be_a Hash
     expect(coords).to be_a Coordinate
     
