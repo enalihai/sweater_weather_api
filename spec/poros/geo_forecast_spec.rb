@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe GeoForecast do
   it 'can create a new GeoForecast from a Hash' do
-    openweather_response = {
+    data = {
     "lat": 35.4676,
     "lon": -97.4368,
     "timezone": "America/Chicago",
@@ -22,12 +22,12 @@ RSpec.describe GeoForecast do
         "wind_speed": 11.5,
         "wind_deg": 200,
         "weather": [
-            {
-                "id": 800,
-                "main": "Clear",
-                "description": "clear sky",
-                "icon": "01d"
-            }
+                {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+          }
         ]
     },
     "hourly": [
@@ -214,7 +214,8 @@ RSpec.describe GeoForecast do
                 }
             ],
             "pop": 0
-        }],
+        }
+    ],
     "daily": [
         {
             "dt": 1659981600,
@@ -532,18 +533,42 @@ RSpec.describe GeoForecast do
             "rain": 0.19,
             "uvi": 10
         }
-    ]
-}
+    ]}
     
-    geo_forecast = GeoForecast.new(openweather_response)
+    geo_forecast = GeoForecast.new(data)
     
     expect(geo_forecast).to be_a GeoForecast
-    expect(geo_forecast.current_outlook).to be_a Hash
+    expect(geo_forecast.current_forecast).to be_a Hash
+    expect(geo_forecast.current_forecast).to have_key :datetime
+    expect(geo_forecast.current_forecast).to have_key :sunrise
+    expect(geo_forecast.current_forecast).to have_key :sunset
+    expect(geo_forecast.current_forecast).to have_key :temperature
+    expect(geo_forecast.current_forecast).to have_key :feels_like
+    expect(geo_forecast.current_forecast).to have_key :humidity
+    expect(geo_forecast.current_forecast).to have_key :uvi
+    expect(geo_forecast.current_forecast).to have_key :visibility
+    expect(geo_forecast.current_forecast).to have_key :conditions
+    expect(geo_forecast.current_forecast).to have_key :icon
     
-    expect(geo_forecast.daily_outlook).to be_a Array
-    expect(geo_forecast.daily_outlook).to be_all Hash
+    expect(geo_forecast.daily_forecast).to be_a Array
+    geo_forecast.daily_forecast.each do |d|
+      expect(d).to be_a Hash
+      expect(d).to have_key :date
+      expect(d).to have_key :sunrise
+      expect(d).to have_key :sunset
+      expect(d).to have_key :max_temp
+      expect(d).to have_key :min_temp
+      expect(d).to have_key :conditions
+      expect(d).to have_key :icon
+    end
     
-    expect(geo_forecast.hourly_outlook).to be_a Array
-    expect(geo_forecast.hourly_outlook).to be_all Hash
+    expect(geo_forecast.hourly_forecast).to be_a Array
+    geo_forecast.hourly_forecast.each do |h|
+      expect(h).to be_a Hash
+      expect(h).to have_key :time
+      expect(h).to have_key :temperature
+      expect(h).to have_key :conditions
+      expect(h).to have_key :icon
+    end
   end 
 end

@@ -3,7 +3,8 @@ class Coordinate
               :lon
 
   def initialize(data)
-    @lat = data[:results][0][:locations][0][:latLng][:lat]
-    @lon = data[:results][0][:locations][0][:latLng][:lng]
+    binding.pry
+    @lat = data[:results].first[:locations].first[:latLng][:lat]
+    @lon = data[:results].first[:locations].first[:latLng][:lng]
   end 
 end

@@ -1,5 +1,6 @@
 class ForecastSerializer
   def self.outlook_forecast(outlook)
+    binding.pry
     {
       'data':
       {
