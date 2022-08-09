@@ -8,8 +8,8 @@ RSpec.describe User, type: :model do
 
     it 'doesnt save the actual password' do
       user = User.create(
-        email: 'model@test.com', 
-        password: 'five', 
+        email: 'model@test.com',
+        password: 'five',
         password_confirmation: 'five'
       )
 
@@ -17,5 +17,5 @@ RSpec.describe User, type: :model do
       expect(user.email).to eq 'model@test.com'
       expect(user.password_digest).to_not eq 'five'
     end
-  end 
+  end
 end

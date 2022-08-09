@@ -4,11 +4,10 @@ require 'rails_helper'
 
 RSpec.describe 'User Request' do
   it 'POST /api/v1/users : posts user to db' do
-    headers = {'content_type'=>'application/json', 'Accept'=>'application/json'}
+    headers = { 'content_type' => 'application/json', 'Accept' => 'application/json' }
     new_user = {  email: 'somenewuser@email.com',
                   password: 'abc123',
-                  password_confirmation: 'abc123'
-    }
+                  password_confirmation: 'abc123' }
 
     post '/api/v1/users', headers: headers, params: new_user
 
