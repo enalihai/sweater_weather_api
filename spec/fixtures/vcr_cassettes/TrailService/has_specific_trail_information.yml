@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://prescriptiontrails.org/api/filter/?by=city&city=Albuquerque&count%5Bquantity%5D=5&offset=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.5.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 09 Aug 2022 18:08:39 GMT
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.6.40
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - sameorigin
+      Set-Cookie:
+      - PHPSESSID=2jnmm1oktesh2ge3m301r8q831; path=/
+      X-Ua-Compatible:
+      - IE=Edge
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"trails":[{"id":1,"name":"Tingley Field","city":"Albuquerque","zip":87102,"crossstreets":"Coal
+        and 10th SW","address":"10 Atlantic Ave SW","transit":"ABQ Ride Stops:  #53,
+        #54","lat":"35.0772432","lng":"-106.6555564","desc":"This%20redeveloped%20park%20provides%20a%20catchment%20basin%20in%20monsoon%20season%2C%20and%20the%20new%20recreation%20facilities%20and%20walking%20trail%20are%20great%20for%20the%20whole%20family.","lighting":"On
+        trail and parking lot","difficulty":1,"surface":"6-foot+ wide sidewalk, 4-foot
+        wide gravel on 2 sides","parking":"On site","facilities":"Restrooms","hours":"6
+        a.m. - 10 p.m.","loopcount":1,"satImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450547549tingleyParkSat.png","largeImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1455036748P1130010.jpg","thumbURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/square_1455036748P1130010.jpg","attractions":["%3Ca%20href%3D%22https%3A%2F%2Fwww.cabq.gov%2Fculturalservices%2Fbiopark%2Fzoo%22%3EZoo%3C%2Fa%3E%20located%20across%2010th%20Street","Tennis%20courts%20across%208th%20street","Shaded%20playgrounds%20and%20picnic%20area","Grassy%20field","Softball%20fields"],"loops":{"1":{"name":"Main
+        Loop","distance":"0.6","steps":1267}},"published":"true","rating":3,"ratings":1,"favorites":0,"ModifiedTime":"2019-09-30
+        11:55:21","reviews":1,"url":"https:\/\/prescriptiontrails.org\/trail\/1\/tingley-field\/"}],"countReturned":1,"totalMatched":53}'
+  recorded_at: Tue, 09 Aug 2022 18:08:39 GMT
+recorded_with: VCR 6.1.0

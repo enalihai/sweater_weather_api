@@ -1,18 +1,19 @@
 require 'rails_helper'
 
-RSpec.describe 'Trail Service' do
+RSpec.describe TrailService, :vcr do
   it 'uses Prescription Trails API for nearby trails' do
-    response = TrailService.get_trail_data('Albuquerque', 5)
-
+    response = TrailService.get_trail_data({quantity: 5}, 'Albuquerque')
+    binding.pry
     expect(response).to be_a Hash
     expect(response).to have_key :trails
     expect(response[:trails]).to be_a Array
     expect(response[:trails][0]).to be_a Hash
   end
 
-  it 'has specific trail information' do
-    response = TrailService.get_trail_data('Albuquerque', 5)
-    trail = response[:trails]
+  it 'has specific trail information', :vcr do
+    response = TrailService.get_trail_data({quantity: 5}, 'Albuquerque')
+    binding.pry
+    trail = response[:trails].first
 
     expect(trail).to have_key :id
     expect(trail[:id]).to be_a Integer

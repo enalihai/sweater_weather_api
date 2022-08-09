@@ -1,0 +1,236 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&location=Albuquerque
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.5.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Tue, 09 Aug 2022 18:08:24 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1743'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Tue, 09 Aug 2022 18:08:24 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Set-Cookie:
+      - JSESSIONID=AE1C5F86A9B75D24987405AE81F4C4E8; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Albuquerque"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Albuquerque","adminArea5Type":"City","adminArea4":"Bernalillo
+        County","adminArea4Type":"County","adminArea3":"NM","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282039130","unknownInput":"","type":"s","latLng":{"lat":35.084248,"lng":-106.649241},"displayLatLng":{"lat":35.084248,"lng":-106.649241},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=35.084248,-106.649241|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-721345465"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Albuquerque","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"RJ","adminArea3Type":"State","adminArea1":"BR","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"362377319","unknownInput":"","type":"s","latLng":{"lat":-22.383301,"lng":-42.916599},"displayLatLng":{"lat":-22.383301,"lng":-42.916599},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=-22.383301,-42.916599|marker-sm-50318A-2&scalebar=true&zoom=12&rand=-1852451300"}]}]}'
+  recorded_at: Tue, 09 Aug 2022 18:08:24 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/onecall?appid=f57e28372b23bcdc9e27700bd3fdd29a&exclude=minutely&lat=35.084248&lon=-106.649241&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.5.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Tue, 09 Aug 2022 18:08:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '17969'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/onecall?exclude=minutely&lat=35.08&lon=-106.65&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":35.0842,"lon":-106.6492,"timezone":"America/Denver","timezone_offset":-21600,"current":{"dt":1660068504,"sunrise":1660047721,"sunset":1660096935,"temp":86,"feels_like":84.85,"pressure":1023,"humidity":37,"dew_point":56.71,"uvi":9.76,"clouds":40,"visibility":10000,"wind_speed":4,"wind_deg":357,"wind_gust":7,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}]},"hourly":[{"dt":1660068000,"temp":86,"feels_like":84.85,"pressure":1023,"humidity":37,"dew_point":56.71,"uvi":9.76,"clouds":40,"visibility":10000,"wind_speed":1.81,"wind_deg":255,"wind_gust":2.95,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1660071600,"temp":86.22,"feels_like":84.72,"pressure":1021,"humidity":35,"dew_point":55.38,"uvi":10.76,"clouds":35,"visibility":10000,"wind_speed":2.48,"wind_deg":252,"wind_gust":5.3,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1660075200,"temp":86.99,"feels_like":85.19,"pressure":1019,"humidity":33,"dew_point":54.43,"uvi":10.18,"clouds":32,"visibility":10000,"wind_speed":4.03,"wind_deg":251,"wind_gust":7.31,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1660078800,"temp":87.49,"feels_like":85.37,"pressure":1017,"humidity":31,"dew_point":53.17,"uvi":8.28,"clouds":39,"visibility":10000,"wind_speed":4.99,"wind_deg":214,"wind_gust":7.23,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0.01},{"dt":1660082400,"temp":81.84,"feels_like":81.55,"pressure":1016,"humidity":42,"dew_point":56.52,"uvi":5.58,"clouds":45,"visibility":10000,"wind_speed":12.62,"wind_deg":130,"wind_gust":13.38,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"pop":0.32,"rain":{"1h":0.28}},{"dt":1660086000,"temp":78.75,"feels_like":78.75,"pressure":1015,"humidity":44,"dew_point":53.42,"uvi":3.04,"clouds":56,"visibility":10000,"wind_speed":6.89,"wind_deg":183,"wind_gust":12.24,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"pop":0.36,"rain":{"1h":0.37}},{"dt":1660089600,"temp":80.89,"feels_like":80.13,"pressure":1014,"humidity":35,"dew_point":49.21,"uvi":1.2,"clouds":63,"visibility":10000,"wind_speed":1.92,"wind_deg":222,"wind_gust":4.65,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"pop":0.23,"rain":{"1h":0.13}},{"dt":1660093200,"temp":82.49,"feels_like":81.21,"pressure":1013,"humidity":34,"dew_point":49.62,"uvi":0.05,"clouds":78,"visibility":10000,"wind_speed":7.76,"wind_deg":74,"wind_gust":8.97,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.23},{"dt":1660096800,"temp":81.12,"feels_like":80.46,"pressure":1014,"humidity":37,"dew_point":50.74,"uvi":0,"clouds":85,"visibility":10000,"wind_speed":10.89,"wind_deg":63,"wind_gust":13.58,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0.17},{"dt":1660100400,"temp":80.42,"feels_like":80.13,"pressure":1015,"humidity":39,"dew_point":52.05,"uvi":0,"clouds":85,"visibility":10000,"wind_speed":7.09,"wind_deg":75,"wind_gust":11.07,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0.14},{"dt":1660104000,"temp":79.23,"feels_like":79.23,"pressure":1016,"humidity":41,"dew_point":52.18,"uvi":0,"clouds":75,"visibility":10000,"wind_speed":4.36,"wind_deg":83,"wind_gust":5.93,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0.12},{"dt":1660107600,"temp":78.73,"feels_like":78.73,"pressure":1016,"humidity":42,"dew_point":52.32,"uvi":0,"clouds":67,"visibility":10000,"wind_speed":4.97,"wind_deg":121,"wind_gust":8.75,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0.12},{"dt":1660111200,"temp":77.5,"feels_like":77.07,"pressure":1017,"humidity":45,"dew_point":53.29,"uvi":0,"clouds":62,"visibility":10000,"wind_speed":7.29,"wind_deg":147,"wind_gust":11.65,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0.14},{"dt":1660114800,"temp":76.53,"feels_like":76.14,"pressure":1017,"humidity":48,"dew_point":53.73,"uvi":0,"clouds":45,"visibility":10000,"wind_speed":6.93,"wind_deg":140,"wind_gust":10.07,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0.18},{"dt":1660118400,"temp":75.27,"feels_like":74.86,"pressure":1017,"humidity":50,"dew_point":53.58,"uvi":0,"clouds":44,"visibility":10000,"wind_speed":5.17,"wind_deg":124,"wind_gust":7.05,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0.06},{"dt":1660122000,"temp":74.66,"feels_like":74.23,"pressure":1017,"humidity":51,"dew_point":53.46,"uvi":0,"clouds":35,"visibility":10000,"wind_speed":5.64,"wind_deg":98,"wind_gust":6.93,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0.06},{"dt":1660125600,"temp":73.6,"feels_like":73.09,"pressure":1018,"humidity":52,"dew_point":53.64,"uvi":0,"clouds":37,"visibility":10000,"wind_speed":5.19,"wind_deg":68,"wind_gust":6.42,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1660129200,"temp":72.75,"feels_like":72.32,"pressure":1018,"humidity":55,"dew_point":53.89,"uvi":0,"clouds":35,"visibility":10000,"wind_speed":4,"wind_deg":51,"wind_gust":5.5,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10n"}],"pop":0.31,"rain":{"1h":0.19}},{"dt":1660132800,"temp":72.66,"feels_like":72.21,"pressure":1018,"humidity":55,"dew_point":54.19,"uvi":0,"clouds":36,"visibility":10000,"wind_speed":2.84,"wind_deg":52,"wind_gust":5.37,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10n"}],"pop":0.35,"rain":{"1h":0.15}},{"dt":1660136400,"temp":73.02,"feels_like":72.61,"pressure":1019,"humidity":55,"dew_point":54.41,"uvi":0.17,"clouds":64,"visibility":10000,"wind_speed":3.06,"wind_deg":63,"wind_gust":5.28,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"pop":0.29,"rain":{"1h":0.15}},{"dt":1660140000,"temp":73.99,"feels_like":73.58,"pressure":1020,"humidity":53,"dew_point":54.25,"uvi":0.88,"clouds":66,"visibility":10000,"wind_speed":2.98,"wind_deg":92,"wind_gust":3.96,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.25},{"dt":1660143600,"temp":74.68,"feels_like":74.28,"pressure":1020,"humidity":52,"dew_point":54.43,"uvi":2.49,"clouds":70,"visibility":10000,"wind_speed":4.72,"wind_deg":117,"wind_gust":6.22,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.33},{"dt":1660147200,"temp":76.37,"feels_like":75.96,"pressure":1020,"humidity":48,"dew_point":53.94,"uvi":4.92,"clouds":72,"visibility":10000,"wind_speed":4.68,"wind_deg":140,"wind_gust":5.75,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.21},{"dt":1660150800,"temp":79.72,"feels_like":79.72,"pressure":1019,"humidity":41,"dew_point":52.74,"uvi":7.62,"clouds":70,"visibility":10000,"wind_speed":3.29,"wind_deg":151,"wind_gust":4.23,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.05},{"dt":1660154400,"temp":82.76,"feels_like":81.52,"pressure":1018,"humidity":35,"dew_point":51.44,"uvi":9.81,"clouds":67,"visibility":10000,"wind_speed":2.19,"wind_deg":147,"wind_gust":4.03,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.05},{"dt":1660158000,"temp":85.77,"feels_like":83.53,"pressure":1017,"humidity":30,"dew_point":49.57,"uvi":10.62,"clouds":36,"visibility":10000,"wind_speed":1.12,"wind_deg":154,"wind_gust":6.42,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1660161600,"temp":87.17,"feels_like":84.47,"pressure":1016,"humidity":27,"dew_point":48.22,"uvi":10.05,"clouds":28,"visibility":10000,"wind_speed":1.79,"wind_deg":171,"wind_gust":4.88,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0.16},{"dt":1660165200,"temp":83.93,"feels_like":82.78,"pressure":1017,"humidity":37,"dew_point":51.46,"uvi":8.16,"clouds":32,"visibility":10000,"wind_speed":15.05,"wind_deg":142,"wind_gust":12.08,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"pop":0.38,"rain":{"1h":0.16}},{"dt":1660168800,"temp":78.44,"feels_like":78.3,"pressure":1017,"humidity":49,"dew_point":55.2,"uvi":3.04,"clouds":40,"visibility":10000,"wind_speed":18.68,"wind_deg":151,"wind_gust":20.15,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"pop":0.22,"rain":{"1h":0.39}},{"dt":1660172400,"temp":73.63,"feels_like":73.24,"pressure":1019,"humidity":54,"dew_point":54.3,"uvi":1.65,"clouds":48,"visibility":10000,"wind_speed":11.52,"wind_deg":160,"wind_gust":17.4,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"pop":0.44,"rain":{"1h":0.63}},{"dt":1660176000,"temp":73.96,"feels_like":73.63,"pressure":1019,"humidity":55,"dew_point":54.64,"uvi":0.64,"clouds":57,"visibility":10000,"wind_speed":9.04,"wind_deg":70,"wind_gust":12.73,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"pop":0.48,"rain":{"1h":0.53}},{"dt":1660179600,"temp":75.16,"feels_like":74.68,"pressure":1017,"humidity":49,"dew_point":53.11,"uvi":0.09,"clouds":100,"visibility":10000,"wind_speed":4,"wind_deg":80,"wind_gust":8.21,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"pop":0.26,"rain":{"1h":0.18}},{"dt":1660183200,"temp":75.51,"feels_like":75.02,"pressure":1018,"humidity":48,"dew_point":53.02,"uvi":0,"clouds":96,"visibility":10000,"wind_speed":8.03,"wind_deg":89,"wind_gust":9.86,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0.25},{"dt":1660186800,"temp":73.65,"feels_like":73.31,"pressure":1019,"humidity":55,"dew_point":54.41,"uvi":0,"clouds":90,"visibility":10000,"wind_speed":10.42,"wind_deg":96,"wind_gust":15.12,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0.29},{"dt":1660190400,"temp":71.1,"feels_like":70.72,"pressure":1020,"humidity":60,"dew_point":54.75,"uvi":0,"clouds":88,"visibility":10000,"wind_speed":6.91,"wind_deg":116,"wind_gust":10.85,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0.21},{"dt":1660194000,"temp":71.19,"feels_like":70.83,"pressure":1021,"humidity":60,"dew_point":54.73,"uvi":0,"clouds":77,"visibility":10000,"wind_speed":2.66,"wind_deg":110,"wind_gust":5.66,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0.15},{"dt":1660197600,"temp":71.58,"feels_like":71.22,"pressure":1021,"humidity":59,"dew_point":54.77,"uvi":0,"clouds":76,"visibility":10000,"wind_speed":2.06,"wind_deg":94,"wind_gust":3.38,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0.14},{"dt":1660201200,"temp":72.05,"feels_like":71.69,"pressure":1021,"humidity":58,"dew_point":54.64,"uvi":0,"clouds":89,"visibility":10000,"wind_speed":3.27,"wind_deg":58,"wind_gust":3.42,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0.08},{"dt":1660204800,"temp":71.85,"feels_like":71.46,"pressure":1020,"humidity":58,"dew_point":54.57,"uvi":0,"clouds":92,"visibility":10000,"wind_speed":3.09,"wind_deg":51,"wind_gust":3.51,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0.1},{"dt":1660208400,"temp":70.7,"feels_like":70.25,"pressure":1020,"humidity":59,"dew_point":54.01,"uvi":0,"clouds":75,"visibility":10000,"wind_speed":3.02,"wind_deg":41,"wind_gust":3.65,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0.1},{"dt":1660212000,"temp":70.43,"feels_like":69.91,"pressure":1020,"humidity":58,"dew_point":53.46,"uvi":0,"clouds":68,"visibility":10000,"wind_speed":3.67,"wind_deg":44,"wind_gust":4.38,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0.1},{"dt":1660215600,"temp":70.18,"feels_like":69.62,"pressure":1020,"humidity":58,"dew_point":52.97,"uvi":0,"clouds":65,"visibility":10000,"wind_speed":4.03,"wind_deg":37,"wind_gust":4.92,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0.07},{"dt":1660219200,"temp":70,"feels_like":69.42,"pressure":1020,"humidity":58,"dew_point":52.83,"uvi":0,"clouds":63,"visibility":10000,"wind_speed":3.56,"wind_deg":54,"wind_gust":4.47,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0.07},{"dt":1660222800,"temp":70.65,"feels_like":70.09,"pressure":1020,"humidity":57,"dew_point":53.1,"uvi":0.17,"clouds":67,"visibility":10000,"wind_speed":3.02,"wind_deg":61,"wind_gust":4.05,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.01},{"dt":1660226400,"temp":72.99,"feels_like":72.43,"pressure":1020,"humidity":52,"dew_point":52.63,"uvi":0.88,"clouds":49,"visibility":10000,"wind_speed":2.8,"wind_deg":41,"wind_gust":3.89,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1660230000,"temp":75.7,"feels_like":75.18,"pressure":1020,"humidity":47,"dew_point":52.52,"uvi":2.51,"clouds":36,"visibility":10000,"wind_speed":2.98,"wind_deg":30,"wind_gust":3.47,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1660233600,"temp":78.46,"feels_like":78.03,"pressure":1019,"humidity":43,"dew_point":52.56,"uvi":5.03,"clouds":29,"visibility":10000,"wind_speed":2.53,"wind_deg":45,"wind_gust":3.22,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1660237200,"temp":81.1,"feels_like":80.64,"pressure":1019,"humidity":39,"dew_point":52.34,"uvi":7.82,"clouds":25,"visibility":10000,"wind_speed":1.12,"wind_deg":85,"wind_gust":2.89,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0}],"daily":[{"dt":1660071600,"sunrise":1660047721,"sunset":1660096935,"moonrise":1660091940,"moonset":1660036260,"moon_phase":0.41,"temp":{"day":86.22,"min":72.57,"max":87.49,"night":78.73,"eve":82.49,"morn":72.91},"feels_like":{"day":84.72,"night":78.73,"eve":81.21,"morn":72.39},"pressure":1021,"humidity":35,"dew_point":55.38,"wind_speed":12.62,"wind_deg":130,"wind_gust":13.58,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":35,"pop":0.36,"rain":0.92,"uvi":10.76},{"dt":1660158000,"sunrise":1660134168,"sunset":1660183272,"moonrise":1660181640,"moonset":1660126860,"moon_phase":0.45,"temp":{"day":85.77,"min":71.1,"max":87.17,"night":71.19,"eve":75.16,"morn":73.02},"feels_like":{"day":83.53,"night":70.83,"eve":74.68,"morn":72.61},"pressure":1017,"humidity":30,"dew_point":49.57,"wind_speed":18.68,"wind_deg":151,"wind_gust":20.15,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":36,"pop":0.48,"rain":2.38,"uvi":10.62},{"dt":1660244400,"sunrise":1660220614,"sunset":1660269609,"moonrise":1660270740,"moonset":1660217820,"moon_phase":0.5,"temp":{"day":85.5,"min":70,"max":86.47,"night":75.54,"eve":81.05,"morn":70.65},"feels_like":{"day":83.55,"night":75.15,"eve":80.33,"morn":70.09},"pressure":1017,"humidity":32,"dew_point":51.08,"wind_speed":19.69,"wind_deg":132,"wind_gust":20.33,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":10,"pop":0.37,"rain":0.17,"uvi":11.12},{"dt":1660330800,"sunrise":1660307061,"sunset":1660355944,"moonrise":1660359360,"moonset":1660308780,"moon_phase":0.53,"temp":{"day":84.85,"min":69.39,"max":90.73,"night":83.48,"eve":90.73,"morn":69.39},"feels_like":{"day":82.72,"night":81.05,"eve":86.94,"morn":68.85},"pressure":1016,"humidity":30,"dew_point":48.72,"wind_speed":11.86,"wind_deg":166,"wind_gust":16.89,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":2,"pop":0.07,"uvi":10.92},{"dt":1660417200,"sunrise":1660393507,"sunset":1660442278,"moonrise":1660447740,"moonset":1660399500,"moon_phase":0.56,"temp":{"day":86.72,"min":73.6,"max":90.59,"night":84.38,"eve":89.24,"morn":73.6},"feels_like":{"day":84.43,"night":82.13,"eve":86.07,"morn":72.77},"pressure":1015,"humidity":30,"dew_point":50.43,"wind_speed":8.01,"wind_deg":178,"wind_gust":12.75,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":9,"pop":0,"uvi":9.74},{"dt":1660503600,"sunrise":1660479953,"sunset":1660528611,"moonrise":1660535880,"moonset":1660490100,"moon_phase":0.6,"temp":{"day":87.78,"min":74.21,"max":93.94,"night":87.98,"eve":93.94,"morn":74.21},"feels_like":{"day":85.33,"night":84.76,"eve":89.98,"morn":73.49},"pressure":1012,"humidity":29,"dew_point":50.63,"wind_speed":8.68,"wind_deg":180,"wind_gust":13.2,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":10},{"dt":1660590000,"sunrise":1660566400,"sunset":1660614942,"moonrise":1660623900,"moonset":1660580400,"moon_phase":0.64,"temp":{"day":90.41,"min":75.94,"max":95.68,"night":84.85,"eve":93.51,"morn":75.94},"feels_like":{"day":87.42,"night":82.72,"eve":89.69,"morn":75.16},"pressure":1011,"humidity":25,"dew_point":48.88,"wind_speed":10.85,"wind_deg":192,"wind_gust":14.47,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":2,"pop":0.35,"rain":0.19,"uvi":10},{"dt":1660676400,"sunrise":1660652846,"sunset":1660701273,"moonrise":1660711980,"moonset":1660670640,"moon_phase":0.67,"temp":{"day":90.79,"min":78.37,"max":94.77,"night":87.19,"eve":94.48,"morn":78.37},"feels_like":{"day":87.35,"night":84.04,"eve":90.39,"morn":77.59},"pressure":1012,"humidity":22,"dew_point":45.36,"wind_speed":7.43,"wind_deg":196,"wind_gust":13.98,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":39,"pop":0.19,"uvi":10}]}'
+  recorded_at: Tue, 09 Aug 2022 18:08:25 GMT
+- request:
+    method: get
+    uri: https://prescriptiontrails.org/api/filter/?by=city&city=Albuquerque&count=5&offset=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.5.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 09 Aug 2022 18:08:25 GMT
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.6.40
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - sameorigin
+      Set-Cookie:
+      - PHPSESSID=j50a369ltqfgakmni37lkloh76; path=/
+      X-Ua-Compatible:
+      - IE=Edge
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"trails":[{"id":1,"name":"Tingley Field","city":"Albuquerque","zip":87102,"crossstreets":"Coal
+        and 10th SW","address":"10 Atlantic Ave SW","transit":"ABQ Ride Stops:  #53,
+        #54","lat":"35.0772432","lng":"-106.6555564","desc":"This%20redeveloped%20park%20provides%20a%20catchment%20basin%20in%20monsoon%20season%2C%20and%20the%20new%20recreation%20facilities%20and%20walking%20trail%20are%20great%20for%20the%20whole%20family.","lighting":"On
+        trail and parking lot","difficulty":1,"surface":"6-foot+ wide sidewalk, 4-foot
+        wide gravel on 2 sides","parking":"On site","facilities":"Restrooms","hours":"6
+        a.m. - 10 p.m.","loopcount":1,"satImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450547549tingleyParkSat.png","largeImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1455036748P1130010.jpg","thumbURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/square_1455036748P1130010.jpg","attractions":["%3Ca%20href%3D%22https%3A%2F%2Fwww.cabq.gov%2Fculturalservices%2Fbiopark%2Fzoo%22%3EZoo%3C%2Fa%3E%20located%20across%2010th%20Street","Tennis%20courts%20across%208th%20street","Shaded%20playgrounds%20and%20picnic%20area","Grassy%20field","Softball%20fields"],"loops":{"1":{"name":"Main
+        Loop","distance":"0.6","steps":1267}},"published":"true","rating":3,"ratings":1,"favorites":0,"ModifiedTime":"2019-09-30
+        11:55:21","reviews":1,"url":"https:\/\/prescriptiontrails.org\/trail\/1\/tingley-field\/"},{"id":2,"name":"Tingley
+        Beach","city":"Albuquerque","zip":87104,"crossstreets":"Central Ave. & Tingley
+        Dr. SW","address":"1800 Tingley Drive SW","transit":"ABQ Ride Stops:  #66,
+        Rapid Ride","lat":"35.086244","lng":"-106.674171","desc":"Tingley%20Beach%20is%20on%20the%20Rio%20Grande%2C%20near%20downtown%20Albuquerque%2C%20next%20to%20the%20BIOPark%20%E2%80%93%20Zoo%20and%20Aquarium%20and%20offers%20fishing%2C%20hiking%2C%20model%20boat%20sailing%2C%20wildlife%20viewing%20and%20walking%20trails%20around%20three%20ponds.%20For%20more%20information%20on%20events%2C%20call%20505-248-8514.%20Visit%20the%20city%27s%20%3Ca%20href%3D%22https%3A%2F%2Fwww.cabq.gov%2Fculturalservices%2Fbiopark%2Ftingley%2Ffishing%2Fweekly-fishing-report%22%3EWeekly%20Fishing%20Report%3C%2Fa%3E%20for%20information%20on%20fishing.","lighting":"None","difficulty":1,"surface":"5-foot
+        wide pavement","parking":"ADA accessible, ample parking on site","facilities":"Restrooms,
+        bike racks","hours":"Dawn to dusk","loopcount":3,"satImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450551278tingleyBeachSat.png","largeImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450551300tingly.jpg","thumbURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/square_1450551300tingly.jpg","attractions":["paddle%20boat%20rentals","Model%20boat%20sailing","Bird%20watching","Fishing%20-%20Train%20station%20sells%20bait","Seasonal%20gift%20shop%2C%20snack%20bar%2C%20and%20cafe"],"loops":{"1":{"name":"North
+        Loop","distance":"0.16","steps":338},"2":{"name":"Central Pond and Children''s
+        Pond","distance":"0.17","steps":359},"3":{"name":"Large Central and South
+        Ponds Connect","distance":"0.6","steps":1267}},"published":"true","rating":4,"ratings":2,"favorites":6,"ModifiedTime":"2021-06-19
+        17:33:51","reviews":0,"url":"https:\/\/prescriptiontrails.org\/trail\/2\/tingley-beach\/"},{"id":3,"name":"Tiguex
+        Park","city":"Albuquerque","zip":87104,"crossstreets":"Mountain & Rio Grande
+        NW","address":"1800 Mountain Rd NW","transit":"ABQ Ride Stops:  #36, bus stop
+        on Rio Grande & Mountain - 235 steps to park","lat":"35.0967569","lng":"-106.66616","desc":"Walk%20two%20loop%20paths%20at%20Tiguex%20Park%2C%20starting%20at%2019th%20Street.%20The%20outer%20loop%20and%20inner%20loop%20connect%20at%20several%20points%2C%20adding%20variety.%20The%20park%20is%20visible%20from%20the%20street%2C%20and%20many%20people%20visit%20it.","lighting":"None","difficulty":1,"surface":"8-foot
+        wide concrete","parking":"On street","facilities":"Picnic tables","hours":"6
+        a.m. - 10 p.m.","loopcount":2,"satImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450551913tiguex-park.png","largeImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450551924tiguex.jpg","thumbURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/square_1450551924tiguex.jpg","attractions":["Nearby%3A%20%3Ca%20href%3D%22http%3A%2F%2Fwww.nmnaturalhistory.org%2F%22%3ENew%20Mexico%20Museum%20of%20Natural%20History%20and%20Science%3C%2Fa%3E","Nearby%3A%20%3Ca%20href%3D%22http%3A%2F%2Fwww.explora.us%2F%22%3EExplora%3C%2Fa%3E","Nearby%3A%20%3Ca%20href%3D%22http%3A%2F%2Fwww.cabq.gov%2Fculturalservices%2Falbuquerque-museum%22%3EAlbuquerque%20Museum%20of%20Art%20and%20History%3C%2Fa%3E","Exercise%20stations%3A%20outdoor%20fitness%20equipment%20located%20along%20walking%20trail","Basketball%20courts","Play%20areas"],"loops":{"1":{"name":"Inner
+        Loop","distance":"0.3","steps":634},"2":{"name":"Outer Loop","distance":"0.5","steps":1056}},"published":"true","rating":4,"ratings":2,"favorites":8,"ModifiedTime":"2021-06-19
+        17:33:57","reviews":0,"url":"https:\/\/prescriptiontrails.org\/trail\/3\/tiguex-park\/"},{"id":4,"name":"Durand
+        Open Space","city":"Albuquerque","zip":87105,"crossstreets":"Isleta Blvd.
+        & Metzgar Rd. SW","address":"4812 Isleta Blvd SW","transit":"Abq Ride Stop
+        #53","lat":"35.001974","lng":"-106.689702","desc":"This%20trail%20around%20grain%20fields%20provides%20a%20relaxing%20and%20fun%20walk.%20The%20site%20is%20farmed%20for%20wildlife%20to%20attract%20birds%2C%20and%20features%20a%20crossing%20to%20the%20bosque.%20Known%20by%20residents%20and%20pilots%20as%20the%20%E2%80%9CP-Patch%E2%80%9D%2C%20the%20landing%20strip%20and%20an%20adjoining%20hanger%20were%20used%20to%20conduct%20aircraft%20repair%20and%20restoration.%20%20Following%20the%20closure%20of%20the%20landing%20strip%20in%20the%201970s%2C%20the%20property%20reverted%20to%20agriculture.","lighting":"None","difficulty":2,"surface":"5-foot
+        wide crusher fine","parking":"On site","facilities":"Benches","hours":"Dawn
+        to dusk","loopcount":1,"satImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450748639durandParkSat.png","largeImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1454876314Durand.jpg","thumbURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/square_1454876314Durand.jpg","attractions":["Bird%20watching","Agriculture%20fields%20and%20an%20acequia","Shaded%20picnic%20tables","Views","Dogs%20allowed%20on%20leash%20only"],"loops":{"1":{"name":"Main
+        Loop","distance":"0.6","steps":1267}},"published":"true","rating":3,"ratings":1,"favorites":1,"ModifiedTime":"2020-04-02
+        11:17:33","reviews":0,"url":"https:\/\/prescriptiontrails.org\/trail\/4\/durand-open-space\/"},{"id":5,"name":"Gutierrez-Hubbell
+        Open Space","city":"Albuquerque","zip":87105,"crossstreets":"Isleta Blvd.
+        & Don Felipe Rd. SW","address":"6029 Isleta Blvd SW","transit":"ABQ Ride Stops:  #66,
+        Rapid Ride","lat":"34.989444","lng":"-106.696689","desc":"Gutierrez-Hubbell%20House%20Open%20Space%20offers%20views%20of%20the%20farm%20and%20demonstration%20gardens%20on%20this%20historic%20site%2C%20making%20this%20a%20pleasing%20walk.%20Many%20public%20events%20are%20offered%20throughout%20the%20year%20-%20call%20%28505%29%20314-0400%20for%20details.","lighting":"None","difficulty":3,"surface":"4-foot
+        wide loose mulch or crusher fine","parking":"On site during open hours or
+        along Hubbell","facilities":"Historic building","hours":"dawn to dusk","loopcount":2,"satImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450749461gutierrezHubbellSat.png","largeImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450749670CIMG6601.JPG","thumbURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/square_1450749670CIMG6601.JPG.jpg","attractions":["%3Ca%20href%3D%22http%3A%2F%2Fgutierrezhubbellhouse.org%22%3EGuti%C3%A9rrez-Hubbell%20House%3C%2Fa%3E%20-%20open%20Tuesdays%20through%20Saturdays%20from%2010%20a.m.%20%E2%80%93%202%20p.m.","Agriculture%20fields%20and%20an%20acequia","Demonstration%20gardens","Dogs%20-%20on%20leash%20only"],"loops":{"1":{"name":"Upper
+        Loop","distance":"0.3","steps":634},"2":{"name":"Lower Loop","distance":"0.4","steps":845}},"published":"true","rating":3.5,"ratings":2,"favorites":3,"ModifiedTime":"2021-04-01
+        13:55:20","reviews":0,"url":"https:\/\/prescriptiontrails.org\/trail\/5\/gutierrez-hubbell-open-space\/"}],"countReturned":5,"totalMatched":53}'
+  recorded_at: Tue, 09 Aug 2022 18:08:25 GMT
+recorded_with: VCR 6.1.0
