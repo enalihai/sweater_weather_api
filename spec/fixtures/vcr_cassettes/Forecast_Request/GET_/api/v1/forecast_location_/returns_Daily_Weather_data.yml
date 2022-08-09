@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 09 Aug 2022 18:08:22 GMT
+      - Tue, 09 Aug 2022 18:12:11 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Tue, 09 Aug 2022 18:08:22 GMT
+      - Tue, 09 Aug 2022 18:12:11 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=8E26EE5005656115981DB48B64B7EBDF; Path=/; HttpOnly
+      - JSESSIONID=8D85A2B00A0D7F81454BD20304A103BE; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -50,8 +50,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
-        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"miami,fl"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Miami","adminArea5Type":"City","adminArea4":"Miami-Dade","adminArea4Type":"County","adminArea3":"FL","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282040379","unknownInput":"","type":"s","latLng":{"lat":25.775084,"lng":-80.194702},"displayLatLng":{"lat":25.775084,"lng":-80.194702},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=25.775084,-80.194702|marker-sm-50318A-1&scalebar=true&zoom=12&rand=1110056128"}]}]}'
-  recorded_at: Tue, 09 Aug 2022 18:08:22 GMT
+        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"miami,fl"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Miami","adminArea5Type":"City","adminArea4":"Miami-Dade","adminArea4Type":"County","adminArea3":"FL","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282040379","unknownInput":"","type":"s","latLng":{"lat":25.775084,"lng":-80.194702},"displayLatLng":{"lat":25.775084,"lng":-80.194702},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=gQyWSGUUeYuG3YUeZt1jQT3kKciCMuN9&type=map&size=225,160&locations=25.775084,-80.194702|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-438954703"}]}]}'
+  recorded_at: Tue, 09 Aug 2022 18:12:11 GMT
 - request:
     method: get
     uri: https://api.openweathermap.org/data/2.5/onecall?appid=f57e28372b23bcdc9e27700bd3fdd29a&exclude=minutely&lat=25.775084&lon=-80.194702&units=imperial
@@ -73,7 +73,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Tue, 09 Aug 2022 18:08:23 GMT
+      - Tue, 09 Aug 2022 18:12:12 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -90,7 +90,7 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"lat":25.7751,"lon":-80.1947,"timezone":"America/New_York","timezone_offset":-14400,"current":{"dt":1660068502,"sunrise":1660042262,"sunset":1660089697,"temp":89.69,"feels_like":102.29,"pressure":1019,"humidity":70,"dew_point":78.6,"uvi":10.12,"clouds":75,"visibility":10000,"wind_speed":14.97,"wind_deg":120,"wind_gust":23.02,"weather":[{"id":803,"main":"Clouds","description":"broken
+      string: '{"lat":25.7751,"lon":-80.1947,"timezone":"America/New_York","timezone_offset":-14400,"current":{"dt":1660068732,"sunrise":1660042262,"sunset":1660089697,"temp":89.69,"feels_like":102.29,"pressure":1019,"humidity":70,"dew_point":78.6,"uvi":10.12,"clouds":75,"visibility":10000,"wind_speed":14.97,"wind_deg":120,"wind_gust":23.02,"weather":[{"id":803,"main":"Clouds","description":"broken
         clouds","icon":"04d"}]},"hourly":[{"dt":1660068000,"temp":89.69,"feels_like":102.29,"pressure":1019,"humidity":70,"dew_point":78.6,"uvi":10.12,"clouds":75,"visibility":10000,"wind_speed":13.2,"wind_deg":119,"wind_gust":16.71,"weather":[{"id":803,"main":"Clouds","description":"broken
         clouds","icon":"04d"}],"pop":0.63},{"dt":1660071600,"temp":89.13,"feels_like":101.73,"pressure":1019,"humidity":69,"dew_point":77.63,"uvi":8.41,"clouds":80,"visibility":10000,"wind_speed":12.93,"wind_deg":114,"wind_gust":15.75,"weather":[{"id":803,"main":"Clouds","description":"broken
         clouds","icon":"04d"}],"pop":0.15},{"dt":1660075200,"temp":88.5,"feels_like":100.44,"pressure":1019,"humidity":68,"dew_point":76.59,"uvi":5.86,"clouds":85,"visibility":10000,"wind_speed":13.67,"wind_deg":109,"wind_gust":15.75,"weather":[{"id":804,"main":"Clouds","description":"overcast
@@ -153,5 +153,5 @@ http_interactions:
         rip currents.\n* WHERE...Coastal Palm Beach, Coastal Broward and Coastal Miami-\nDade
         Counties.\n* WHEN...Until 8 PM EDT this evening.\n* IMPACTS...Rip currents
         can sweep even the best swimmers away\nfrom shore into deeper water.","tags":[]}]}'
-  recorded_at: Tue, 09 Aug 2022 18:08:23 GMT
+  recorded_at: Tue, 09 Aug 2022 18:12:12 GMT
 recorded_with: VCR 6.1.0

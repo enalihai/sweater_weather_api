@@ -1,5 +1,5 @@
 class TrailSerializer
-  def self.trail_info(forecast, trails)
+  def self.trail_info(forecast, trails, city)
     {
       "data": 
       {
@@ -7,7 +7,7 @@ class TrailSerializer
         "type": "trails",
         "attributes": 
         {
-          "city": forecast[:dt],
+          "city": city,
           "forecast": 
             {
             "summary": forecast[:weather][0][:description],

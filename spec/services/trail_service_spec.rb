@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe TrailService, :vcr do
   it 'uses Prescription Trails API for nearby trails' do
     response = TrailService.get_trail_data({quantity: 5}, 'Albuquerque')
-    binding.pry
+
     expect(response).to be_a Hash
     expect(response).to have_key :trails
     expect(response[:trails]).to be_a Array
@@ -12,7 +12,7 @@ RSpec.describe TrailService, :vcr do
 
   it 'has specific trail information', :vcr do
     response = TrailService.get_trail_data({quantity: 5}, 'Albuquerque')
-    binding.pry
+
     trail = response[:trails].first
 
     expect(trail).to have_key :id
@@ -29,9 +29,6 @@ RSpec.describe TrailService, :vcr do
 
     expect(trail).to have_key :crossstreets
     expect(trail[:crossstreets]).to be_a String
-    
-    expect(trail).to have_key :address
-    expect(trail[:addresss]).to be_a String
     
     expect(trail).to have_key :transit
     expect(trail[:transit]).to be_a String
@@ -98,11 +95,5 @@ RSpec.describe TrailService, :vcr do
 
     expect(trail).to have_key :reviews
     expect(trail[:reviews]).to be_a Integer
-
-    expect(trail).to have_key :distance
-    expect(trail[:distance]).to be_a Float
-
-    expect(trail).to have_key :url
-    expect(trail[:url]).to be_a String
   end 
 end

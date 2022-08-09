@@ -6,8 +6,9 @@ module Api
         coords = LocationFacade.get_location_coords(params[:city])
         forecast = ForecastFacade.find_outlook_by_coords(coords.lat, coords.lon)
         trails = TrailFacade.find_trails_by_city(params[:quantity], params[:city])
-        
-        render json: TrailSerializer.trail_info(forecast.current_forecast, trails)
+        city = params[:city]
+
+        render json: TrailSerializer.trail_info(forecast.current_forecast, trails, city)
       end
     end
   end
