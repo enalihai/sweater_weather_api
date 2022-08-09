@@ -6,7 +6,6 @@ class Trail
               :loops
 
   def initialize(data)
-    binding.pry
     @id = data[:id]
     @trail_name = data[:name]
     @difficulty = data[:difficulty]

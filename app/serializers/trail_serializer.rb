@@ -17,17 +17,16 @@ class TrailSerializer
               "trail_name": trail.trail_name,
               "difficulty": trail.difficulty,
               "parking": trail.parking,
-              "loops": {
-                "1": {
-                  "name": "Main",
-                  "distance": ".75",
-                  "steps": 1584
-                }
+              "loops": trail.loops
+                # "1": {
+                #   "name": "Main",
+                #   "distance": ".75",
+                #   "steps": 1584
+                # }
               }
             }
           end
         }
       }
-    }
   end
 end
