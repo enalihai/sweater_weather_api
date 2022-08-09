@@ -1,15 +1,17 @@
 class TrailSerializer
   def self.trail_info(forecast, trails)
-    binding.pry
     {
-      "data": {
+      "data": 
+      {
         "id": nil,
-        "type": "traills",
-        "attributes": {
-          "city": forecast.city
-          "forecast": {
-            "summary": forecast.conditions,
-            "temperature":  forecast.temperature
+        "type": "trails",
+        "attributes": 
+        {
+          "city": forecast[:dt],
+          "forecast": 
+            {
+            "summary": forecast[:weather][0][:description],
+            "temperature":  forecast[:temp]
           },
           "trails": trails.map do |trail|
             {
@@ -17,16 +19,17 @@ class TrailSerializer
               "trail_name": trail.trail_name,
               "difficulty": trail.difficulty,
               "parking": trail.parking,
-              "loops": trail.loops
-                # "1": {
-                #   "name": "Main",
-                #   "distance": ".75",
-                #   "steps": 1584
-                # }
+              "loops": trail.loops.each do |loop_specs|
+                {
+                  "name": loop_specs[1][:name],
+                  "distance": loop_specs[1][:distance],
+                  "steps": loop_specs[1][:steps]
+                }
+              end
               }
-            }
           end
         }
       }
+    }
   end
 end

@@ -12,7 +12,7 @@ RSpec.describe 'Trail Service' do
 
   it 'has specific trail information' do
     response = TrailService.get_trail_data('Albuquerque', 5)
-    trails = response[:trails][0]
+    trail = response[:trails]
 
     expect(trail).to have_key :id
     expect(trail[:id]).to be_a Integer
