@@ -35,7 +35,7 @@ RSpec.describe 'User Request' do
     expect(post_outcome[:data][:attributes][:api_key]).to be_a String
   end
 
-   it '#EDGECASE POST /api/v1/users : renders error on bad creation', :vcr do
+  it '#EDGECASE POST /api/v1/users : renders error on bad creation', :vcr do
     headers = { 'content_type' => 'application/json', 'Accept' => 'application/json' }
     invalid_input = { email: 'somenewuser@email.com',
                       password: '123abc',
@@ -48,10 +48,17 @@ RSpec.describe 'User Request' do
 
     post_outcome = JSON.parse(response.body, symbolize_names: true)
 
-    expect(post_outcome).to have_key :error
-    expect(post_outcome[:error]).to eq 'registration'
-    
-    expect(post_outcome).to have_key :message
-    expect(post_outcome[:message]).to eq 'invalid registration'
+    expect(post_outcome).to have_key :data
+    expect(post_outcome[:data]).to be_a Hash
+
+    expect(post_outcome[:data]).to_not have_key :id
+    expect(post_outcome[:data]).to_not have_key :type
+    expect(post_outcome[:data]).to_not have_key :attributes
+
+    expect(post_outcome[:data]).to have_key :error
+    expect(post_outcome[:data][:error]).to eq 'registration'
+
+    expect(post_outcome[:data]).to have_key :message
+    expect(post_outcome[:data][:message]).to eq "password and confirmation must match!"
   end
 end
