@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'RoadTrip Request' do
+RSpec.describe 'RoadTrip Request', type: :request do
   describe 'POST /api/v1/road_trip' do
     it 'returns success' do
       header = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
