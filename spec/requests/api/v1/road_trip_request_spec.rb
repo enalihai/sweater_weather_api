@@ -3,6 +3,12 @@ require 'rails_helper'
 RSpec.describe 'RoadTrip Request', type: :request do
   describe 'POST /api/v1/road_trip' do
     it 'returns success', :vcr do
+      user = User.create(
+                    email: 'test@google.com',
+                    password: 'password',
+                    password_confirmation: 'pasword'    
+                  )
+                  
       header = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
       body = {
         origin: 'Denver, CO',
