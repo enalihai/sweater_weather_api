@@ -19,6 +19,12 @@ module Api
                  status: 404
         end
       end
+
+      # def validate_email
+      #   email = params[:email]
+      #   if User.find_by(email: params[:email])
+      #     render json: {data{error: 'invalid', message: 'Email is already registered!'}}
+      # end
     end
   end
 end
