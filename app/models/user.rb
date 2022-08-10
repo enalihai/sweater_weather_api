@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_secure_password
 
   def api_gen
-    self.api_key = SecureRandom.hex(27)
+    self.api_key = SecureRandom.hex(20)
   end
 end

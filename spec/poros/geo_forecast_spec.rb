@@ -107,16 +107,16 @@ RSpec.describe GeoForecast do
     it 'includes specific Current Forecast data' do
       expect(@geo_forecast).to be_a GeoForecast
       expect(@geo_forecast.current_forecast).to be_a Hash
-      expect(@geo_forecast.current_forecast).to have_key :dt
+      expect(@geo_forecast.current_forecast).to have_key :datetime
       expect(@geo_forecast.current_forecast).to have_key :sunrise
       expect(@geo_forecast.current_forecast).to have_key :sunset
-      expect(@geo_forecast.current_forecast).to have_key :temp
+      expect(@geo_forecast.current_forecast).to have_key :temperature
       expect(@geo_forecast.current_forecast).to have_key :feels_like
       expect(@geo_forecast.current_forecast).to have_key :humidity
       expect(@geo_forecast.current_forecast).to have_key :uvi
       expect(@geo_forecast.current_forecast).to have_key :visibility
-      expect(@geo_forecast.current_forecast[:weather][0]).to have_key :description
-      expect(@geo_forecast.current_forecast[:weather][0]).to have_key :icon
+      expect(@geo_forecast.current_forecast).to have_key :conditions
+      expect(@geo_forecast.current_forecast).to have_key :icon
     end
 
     it 'includes specific Daily Forecast data' do
@@ -124,14 +124,13 @@ RSpec.describe GeoForecast do
 
       @geo_forecast.daily_forecast.each do |d|
         expect(d).to be_a Hash
-        expect(d).to have_key :dt
+        expect(d).to have_key :date
         expect(d).to have_key :sunrise
         expect(d).to have_key :sunset
-        expect(d).to have_key :temp
-        expect(d[:temp]).to have_key :max
-        expect(d[:temp]).to have_key :min
-        expect(d[:weather][0]).to have_key :description
-        expect(d[:weather][0]).to have_key :icon
+        expect(d).to have_key :max_temp
+        expect(d).to have_key :min_temp
+        expect(d).to have_key :conditions
+        expect(d).to have_key :icon
       end
     end
 
@@ -140,10 +139,10 @@ RSpec.describe GeoForecast do
 
       @geo_forecast.hourly_forecast.each do |h|
         expect(h).to be_a Hash
-        expect(h).to have_key :dt
-        expect(h).to have_key :temp
-        expect(h[:weather][0]).to have_key :description
-        expect(h[:weather][0]).to have_key :icon
+        expect(h).to have_key :time
+        expect(h).to have_key :temperature
+        expect(h).to have_key :conditions
+        expect(h).to have_key :icon
       end
     end
 

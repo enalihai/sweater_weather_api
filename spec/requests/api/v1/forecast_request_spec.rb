@@ -122,14 +122,14 @@ RSpec.describe 'Forecast Request' do
       hourly_weather = hourly[:data][:attributes][:hourly_weather]
 
       expect(hourly_weather).to be_a Array
-      expect(hourly_weather.count).to eq 8
+      expect(hourly_weather.count).to eq 48
 
       hourly_weather.each do |hour|
         expect(hour).to have_key :time
         expect(hour[:time]).to be_a String
 
         expect(hour).to have_key :temperature
-        expect(hour[:temperature]).to be_a Float
+        expect(hour[:temperature]).to be_a Numeric
 
         expect(hour).to have_key :conditions
         expect(hour[:conditions]).to be_a String
@@ -141,13 +141,13 @@ RSpec.describe 'Forecast Request' do
   end
 
   describe '#EDGECASE / Sad Path' do
-    it 'returns an error for nil query'
-    # headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
+   xit 'returns an error for nil query', :vcr do
+      headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
 
-    # get '/api/v1/forecast', headers: headers, params: nil
+      get '/api/v1/forecast', headers: headers, params: nil
 
-    # expect(response).to_not be_successful
-    # expect(response).to have_http_status 400
-    # end
+      expect(response).to_not be_successful
+      expect(response).to have_http_status 400
+    end
   end
 end

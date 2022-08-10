@@ -5,19 +5,43 @@ class RoadTrip
               :end_city,
               :travel_time,
               :temperature,
-              :conditions
+              :conditions,
+              :total_duration
 
   def initialize(directions, outlook)
-    @start_city = directions.directions.first[:streets]
-    @end_city = directions.directions.last[:narrative]
-    @travel_time = total_duration(directions)
-    @temperature = outlook.hourly_forecast[2][:temp]
-    @conditions = outlook.hourly_forecast[2][:weather][0][:description]
+    # @start_city = outlook[-1]
+    @end_city = directions[:route][:legs].last[:destNarrative]
+    @travel_time = total_duration(directions)[0..1].to_i
+    @temperature = outlook.hourly_forecast["#{@total_hours}".to_i][:temperature]
+    @conditions = outlook.hourly_forecast["#{@total_hours}".to_i][:conditions]
+    @total_hours = total_duration(directions)[0..1].to_i + 1
   end
 
   def total_duration(directions)
-   time_array = directions.directions.map {|direction| direction[:time]} 
-   sum = time_array.sum
-   Time.at(sum).strftime("%H:%M:%S")
+    binding.pry
+    time_array = directions[:route][:legs][0][:maneuvers].map do |direction| 
+      direction[:formattedTime]
+    end 
+
+    sum_array = time_array.map do |t|
+      hour, minute = t.split(':')
+      minns = hour.to_i * 60 + minute.to_i
+    end
+
+    total_mins = sum_array.sum
+    mins = total_mins.to_i % 60
+    hours = total_mins.to_i / 60
+
+    "#{hours} hours and #{mins} minutes"
   end
 end
+
+  # def destination_forecast(directions)
+  #   total_hours = total_duration(directions)[0..1].to_i > 48
+    
+  #   if total_hours > 48
+  #     render json: {data: { error: 'impossible route'}}
+  #   else
+  #     @conditions
+  #   end
+  # end
