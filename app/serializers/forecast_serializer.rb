@@ -24,7 +24,7 @@ class ForecastSerializer
               'conditions': outlook.current_forecast[:weather][0][:description],
               'icon': outlook.current_forecast[:weather][0][:icon]
             },
-            'daily_weather': 
+            'daily_weather':
                 outlook.daily_forecast.map do |d|
                   {
                     'date': Time.at(d[:dt]),
@@ -36,7 +36,7 @@ class ForecastSerializer
                     'icon': d[:weather][0][:icon]
                   }
                 end,
-            'hourly_weather': 
+            'hourly_weather':
                 outlook.hourly_forecast.first(8).map do |h|
                   {
                     'time': Time.at(h[:dt]),
@@ -46,7 +46,7 @@ class ForecastSerializer
                   }
                 end
           }
-        }
       }
+    }
   end
 end

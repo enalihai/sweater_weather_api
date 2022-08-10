@@ -142,12 +142,12 @@ RSpec.describe 'Forecast Request' do
 
   describe '#EDGECASE / Sad Path' do
     it 'returns an error for nil query'
-      # headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
+    # headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
 
-      # get '/api/v1/forecast', headers: headers, params: nil
+    # get '/api/v1/forecast', headers: headers, params: nil
 
-      # expect(response).to_not be_successful
-      # expect(response).to have_http_status 400
+    # expect(response).to_not be_successful
+    # expect(response).to have_http_status 400
     # end
   end
 end

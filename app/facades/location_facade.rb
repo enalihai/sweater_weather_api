@@ -5,7 +5,7 @@ class LocationFacade
     data = LocationService.get_coords(city)
 
     if data[:info][:statuscode] == 400
-      { data: {error: 'invalid', message: 'no lat/lon for that location!'}}
+      { data: { error: 'invalid', message: 'no lat/lon for that location!' } }
     else
       Coordinate.new(data)
     end

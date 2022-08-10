@@ -59,6 +59,6 @@ RSpec.describe 'User Request' do
     expect(post_outcome[:data][:error]).to eq 'registration'
 
     expect(post_outcome[:data]).to have_key :message
-    expect(post_outcome[:data][:message]).to eq "password and confirmation must match!"
+    expect(post_outcome[:data][:message]).to eq 'password and confirmation must match!'
   end
 end

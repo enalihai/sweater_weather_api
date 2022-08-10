@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe GeoForecast do
@@ -7,12 +8,12 @@ RSpec.describe GeoForecast do
       @data = {
         "lat": 35.4676,
         "lon": -97.4368,
-        "timezone": "America/Chicago",
-        "timezone_offset": -18000,
+        "timezone": 'America/Chicago',
+        "timezone_offset": -18_000,
         "current": {
-          "dt": 1660116112,
-          "sunrise": 1660131915,
-          "sunset": 1660181103,
+          "dt": 1_660_116_112,
+          "sunrise": 1_660_131_915,
+          "sunset": 1_660_181_103,
           "temp": 75,
           "feels_like": 76.15,
           "pressure": 1017,
@@ -20,21 +21,21 @@ RSpec.describe GeoForecast do
           "dew_point": 69.84,
           "uvi": 0,
           "clouds": 20,
-          "visibility": 10000,
+          "visibility": 10_000,
           "wind_speed": 4.61,
           "wind_deg": 220,
           "weather": [
             {
               "id": 801,
-              "main": "Clouds",
-              "description": "few clouds",
-              "icon": "02n"
+              "main": 'Clouds',
+              "description": 'few clouds',
+              "icon": '02n'
             }
           ]
         },
         "hourly": [
           {
-            "dt": 1660114800,
+            "dt": 1_660_114_800,
             "temp": 75,
             "feels_like": 76.15,
             "pressure": 1017,
@@ -42,16 +43,16 @@ RSpec.describe GeoForecast do
             "dew_point": 69.84,
             "uvi": 0,
             "clouds": 20,
-            "visibility": 10000,
+            "visibility": 10_000,
             "wind_speed": 2.51,
             "wind_deg": 91,
             "wind_gust": 3.87,
             "weather": [
               {
                 "id": 801,
-                "main": "Clouds",
-                "description": "few clouds",
-                "icon": "02n"
+                "main": 'Clouds',
+                "description": 'few clouds',
+                "icon": '02n'
               }
             ],
             "pop": 0.31
@@ -59,11 +60,11 @@ RSpec.describe GeoForecast do
         ],
         "daily": [
           {
-            "dt": 1659981600,
-            "sunrise": 1659959020,
-            "sunset": 1660008429,
-            "moonrise": 1659999480,
-            "moonset": 1659943740,
+            "dt": 1_659_981_600,
+            "sunrise": 1_659_959_020,
+            "sunset": 1_660_008_429,
+            "moonrise": 1_659_999_480,
+            "moonset": 1_659_943_740,
             "moon_phase": 0.37,
             "temp": {
               "day": 96.22,
@@ -88,9 +89,9 @@ RSpec.describe GeoForecast do
             "weather": [
               {
                 "id": 500,
-                "main": "Rain",
-                "description": "light rain",
-                "icon": "10d"
+                "main": 'Rain',
+                "description": 'light rain',
+                "icon": '10d'
               }
             ],
             "clouds": 47,
@@ -117,7 +118,7 @@ RSpec.describe GeoForecast do
       expect(@geo_forecast.current_forecast[:weather][0]).to have_key :description
       expect(@geo_forecast.current_forecast[:weather][0]).to have_key :icon
     end
-    
+
     it 'includes specific Daily Forecast data' do
       expect(@geo_forecast.daily_forecast).to be_a Array
 
@@ -136,7 +137,7 @@ RSpec.describe GeoForecast do
 
     it 'includes specific Hourly Weather Data' do
       expect(@geo_forecast.hourly_forecast).to be_a Array
-      
+
       @geo_forecast.hourly_forecast.each do |h|
         expect(h).to be_a Hash
         expect(h).to have_key :dt
@@ -147,6 +148,6 @@ RSpec.describe GeoForecast do
     end
 
     it 'removes uncalled for Forecast Data' do
-    end 
+    end
   end
 end
