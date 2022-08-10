@@ -19,10 +19,10 @@ RSpec.describe 'Location Facade' do
 
   it 'SAD returns a hash for nil query', :vcr do
     coords = LocationFacade.get_location_coords('')
-    
+
     expect(coords).to be_a Hash
     expect(coords).to have_key :data
-    
+
     expect(coords[:data]).to have_key :error
     expect(coords[:data][:error]).to eq 'invalid'
 

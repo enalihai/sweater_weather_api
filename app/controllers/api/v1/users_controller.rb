@@ -15,10 +15,16 @@ module Api
 
       def confirm_password
         if params[:password] != params[:password_confirmation]
-          render json: { data: { error: 'registration', message: 'password and confirmation must match!' } }, status: 404
+          render json: { data: { error: 'registration', message: 'password and confirmation must match!' } },
+                 status: 404
         end
       end
 
+      # def validate_email
+      #   email = params[:email]
+      #   if User.find_by(email: params[:email])
+      #     render json: {data{error: 'invalid', message: 'Email is already registered!'}}
+      # end
     end
   end
 end

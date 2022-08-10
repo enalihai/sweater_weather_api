@@ -12,52 +12,52 @@ class GeoForecast
   end
 end
 
-  # def self.output
-  #   make a method that pairs down the information given to the serializer
-  # end
+# def self.output
+#   make a method that pairs down the information given to the serializer
+# end
 
-  # def self.current_weather(current_forecast)
-  #   binding.pry
-  #   {
-  #   datetime: Time.at(data[:dt]),
-  #   sunrise: Time.at(data[:sunrise]),
-  #   sunset: Time.at(data[:sunset]),
-  #   temperature: data[:temp],
-  #   feels_like: data[:feels_like],
-  #   humidity: data[:humidity],
-  #   uvi: data[:uvi],
-  #   visibility: data[:visibility],
-  #   conditions: data[:weather].first[:description],
-  #   icon: data[:weather][0][:icon]
-  #   }
-  # end
+# def self.current_weather(current_forecast)
+#   binding.pry
+#   {
+#   datetime: Time.at(data[:dt]),
+#   sunrise: Time.at(data[:sunrise]),
+#   sunset: Time.at(data[:sunset]),
+#   temperature: data[:temp],
+#   feels_like: data[:feels_like],
+#   humidity: data[:humidity],
+#   uvi: data[:uvi],
+#   visibility: data[:visibility],
+#   conditions: data[:weather].first[:description],
+#   icon: data[:weather][0][:icon]
+#   }
+# end
 
-  # def self.daily_weather(@daily_forecast)
-  #   data.map do |d|
-  #     binding.pry
-  #     {
-  #       date: Time.at(d[:dt]).strftime('%F'),
-  #       sunrise: Time.at(d[:sunrise]),
-  #       sunset: Time.at(d[:sunset]),
-  #       max_temp: d[:temp][:max],
-  #       min_temp: d[:temp][:min],
-  #       conditions: d[:weather][0][:description],
-  #       icon: day[:weather][0][:icon]
-  #     }
-  #   end
-  # end
+# def self.daily_weather(@daily_forecast)
+#   data.map do |d|
+#     binding.pry
+#     {
+#       date: Time.at(d[:dt]).strftime('%F'),
+#       sunrise: Time.at(d[:sunrise]),
+#       sunset: Time.at(d[:sunset]),
+#       max_temp: d[:temp][:max],
+#       min_temp: d[:temp][:min],
+#       conditions: d[:weather][0][:description],
+#       icon: day[:weather][0][:icon]
+#     }
+#   end
+# end
 
-  # def self.hourly_weather(@hourly_forecast)
-  #   data.map do |h|
-  #     binding.pry
-  #       {
-  #       time: Time.at(h[:dt]).strftime('%T'),
-  #       temperature: h[:temp].to_f,
-  #       conditions: h[:weather][0][:description],
-  #       icon: h[:weather][:icon]
-  #     }
-  #   end
-  # end
+# def self.hourly_weather(@hourly_forecast)
+#   data.map do |h|
+#     binding.pry
+#       {
+#       time: Time.at(h[:dt]).strftime('%T'),
+#       temperature: h[:temp].to_f,
+#       conditions: h[:weather][0][:description],
+#       icon: h[:weather][:icon]
+#     }
+#   end
+# end
 
 # def self.current_weather(data)
 #   {

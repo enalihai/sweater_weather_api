@@ -5,9 +5,15 @@ class LocationFacade
     data = LocationService.get_coords(city)
 
     if data[:info][:statuscode] == 400
-      { data: {error: 'invalid', message: 'no lat/lon for that location!'}}
+      { data: { error: 'invalid', message: 'no lat/lon for that location!' } }
     else
       Coordinate.new(data)
     end
+  end
+
+  def self.get_directions(start_city, end_city)
+    location_service = LocationService.directions(start_city, end_city)
+    
+    Directions.new(location_service)
   end
 end
