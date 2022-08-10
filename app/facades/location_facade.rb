@@ -13,11 +13,7 @@ class LocationFacade
 
   def self.get_directions(start_city, end_city)
     location_service = LocationService.directions(start_city, end_city)
-
-    # if location_service[:route].first == location_service[:route][:routeError] 
-    #   render json: {data: {error: 'no location', message: 'missing a location!'}}, status: 404
-    # else
-    Directions.new(location_service[:route])
-    # end
+    
+    Directions.new(location_service)
   end
 end
