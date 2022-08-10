@@ -130,7 +130,6 @@ RSpec.describe 'Forecast Request' do
 
         expect(hour).to have_key :temperature
         expect(hour[:temperature]).to be_a Float
-        # check to see if imperial
 
         expect(hour).to have_key :conditions
         expect(hour[:conditions]).to be_a String
@@ -142,16 +141,13 @@ RSpec.describe 'Forecast Request' do
   end
 
   describe '#EDGECASE / Sad Path' do
-    it 'pairs down the Mapquest request'
-    # fill in test during Poro creation
-    it 'pairs down the OpenWeather request'
-    # to not include minutely / alerts
-    # fill in test during Poro creation
-    it 'returns error for invalid format'
-    # use webmock to make a bad json response
-    it 'returns error when location input is invalid'
-    # figure out how to break Mapquest geocoding
-    it 'returns error when weather input is invalid'
-    # figure out how to break OpenWeather API
+    it 'returns an error for nil query'
+      # headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
+
+      # get '/api/v1/forecast', headers: headers, params: nil
+
+      # expect(response).to_not be_successful
+      # expect(response).to have_http_status 400
+    # end
   end
 end

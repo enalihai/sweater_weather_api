@@ -5,7 +5,8 @@ class UserSerializer
         'type': 'users',
         'id': user.id,
         'attributes': {
-          'email': user.email
+          'email': user.email,
+          'api_key': user.api_key
         }
       }
     }
