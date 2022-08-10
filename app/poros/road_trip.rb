@@ -1,3 +1,5 @@
+require 'time'
+
 class RoadTrip
   attr_reader :start_city,
               :end_city,
@@ -16,6 +18,6 @@ class RoadTrip
   def total_duration(directions)
    time_array = directions.directions.map {|direction| direction[:time]} 
    sum = time_array.sum
-   sum / 60
+   Time.at(sum).strftime("%H:%M:%S")
   end
 end

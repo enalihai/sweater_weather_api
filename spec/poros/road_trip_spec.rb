@@ -440,7 +440,7 @@ RSpec.describe RoadTrip do
       }
     }
 
-    created_trip = RoadTrip.new(directions, weather)
+    created_trip = RoadTrip.new(directions, weather[:hourly])
 
     expect(created_trip).to be_a RoadTrip
     expect(created_trip.start_city).to be_a String
