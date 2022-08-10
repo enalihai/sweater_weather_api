@@ -4,7 +4,7 @@ RSpec.describe RoadTrip do
   it 'takes information from multiple endpoints as a hash' do
     weather = [
           {
-            "dt": 1_660_114_800,
+            "dt": 1660114800,
             "temp": 75,
             "feels_like": 76.15,
             "pressure": 1017,
@@ -27,12 +27,9 @@ RSpec.describe RoadTrip do
           }
         ]
 
-    created_trip = RoadTrip.new(start_city: 'Denver,CO', 
-                                end_city: 'Estes Park,CO', 
-                                travel_time: "00:42:56", 
-                                weather: weather)
+    created_trip = RoadTrip.new(directions, weather)
 
-    expect(created_trip).to be_a Roadtrip
+    expect(created_trip).to be_a RoadTrip
     expect(created_trip.start_city).to eq 'Denver,CO'
     expect(created_trip.end_city).to eq 'Estes Park,CO'
     expect(created_trip.travel_time).to eq '00:42:45'

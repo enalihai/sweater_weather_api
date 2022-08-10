@@ -14,7 +14,6 @@ RSpec.describe 'RoadTrip Request', type: :request do
 
       expect(response).to be_successful
       expect(response).to have_http_status 200
-      # add the rest of the tests when you get there
     end
   end
 end
