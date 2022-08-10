@@ -10,6 +10,11 @@ class GeoForecast
     @hourly_forecast = data[:hourly]
     @daily_forecast = data[:daily]
   end
+end
+
+  # def self.output
+  #   make a method that pairs down the information given to the serializer
+  # end
 
   # def self.current_weather(current_forecast)
   #   binding.pry
@@ -53,7 +58,7 @@ class GeoForecast
   #     }
   #   end
   # end
-end
+
 # def self.current_weather(data)
 #   {
 #   datetime: Time.at(data[:dt].strftime('%D')),
