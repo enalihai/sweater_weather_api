@@ -8,7 +8,7 @@ module Api
         forecast = ForecastFacade.find_outlook_by_coords(coords.lat, coords.lon)
 
         if forecast.nil?
-          render json: { data: { error: 'forecast', message: forecast.message } }, status: 404
+          render json: { data: { error: 'forecast', message: 'bad forecast request' } }, status: 404
         else
           render json: ForecastSerializer.outlook_forecast(forecast), status: 200
         end
