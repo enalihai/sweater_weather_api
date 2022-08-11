@@ -9,7 +9,6 @@ RSpec.describe Directions do
 
     expect(route).to be_a Directions
     # binding.pry
-
   end
   it 'checks the input for an impossible route'
 end

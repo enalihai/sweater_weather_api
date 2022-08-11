@@ -64,5 +64,6 @@ RSpec.describe GeoForecast do
         expect(h[:icon]).to be_a String 
       end
     end
+    ``
   end
 end
