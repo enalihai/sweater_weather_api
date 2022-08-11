@@ -1,61 +1,61 @@
 # frozen_string_literal: true
 
 class GeoForecast
-  attr_reader :current_forecast,
-              :hourly_forecast,
-              :daily_forecast,
-              :current_weather,
-              :daily_weather,
-              :hourly_weather,
-              :start_city
+  attr_reader :datetime,
+              :sunrise,
+              :sunset,
+              :temperature,
+              :feels_like,
+              :humidity,
+              :uvi,
+              :visibility,
+              :conditions,
+              :icon,
+              :hourly,
+              :daily
 
   def initialize(data)
-    @current_forecast = current_weather(data[:current])
-    @hourly_forecast = hourly_weather(data[:hourly])
-    @daily_forecast = daily_weather(data[:daily])
-  end
-
-  def self.start_city(data)
-    data[:timezone].partition('/').last
-  end
-    
-  def current_weather(data)
-    {
-    datetime: Time.at(data[:dt]),
-    sunrise: Time.at(data[:sunrise]),
-    sunset: Time.at(data[:sunset]),
-    temperature: data[:temp],
-    feels_like: data[:feels_like],
-    humidity: data[:humidity],
-    uvi: data[:uvi],
-    visibility: data[:visibility],
-    conditions: data[:weather][0][:description],
-    icon: data[:weather][0][:icon]
-    }
+    @datetime = Time.at(data[:current][:dt]).strftime('%T')
+    @sunrise = Time.at(data[:current][:sunrise]).strftime('%T')
+    @sunset = Time.at(data[:current][:sunset]).strftime('%T')
+    @temperature = data[:current][:temp]
+    @feels_like = data[:current][:feels_like]
+    @humidity = data[:current][:humidity]
+    @uvi = data[:current][:uvi]
+    @visibility = data[:current][:visibility]
+    @conditions = data[:current][:weather][0][:description]
+    @icon = data[:current][:weather][0][:icon]
+    @hourly = hourly_weather(data)
+    @daily = daily_weather(data)
   end
 
   def hourly_weather(data)
-    data.map do |hour|
+    data[:hourly].map do |h|
       {
-      time: Time.at(hour[:dt]).strftime('%T'),
-      temperature: hour[:temp],
-      conditions: hour[:weather][0][:description],
-      icon: hour[:weather][0][:icon]
+      time: Time.at(h[:dt]).strftime('%T'),
+      temperature: h[:temp],
+      conditions: h[:weather][0][:description],
+      icon: h[:weather][0][:icon]
       }
     end
   end
 
   def daily_weather(data)
-    data.map do |day|
+    data[:daily].map do |d|
       {
-      date: Time.at(day[:dt]).strftime('%D'),
-      sunrise: Time.at(day[:sunrise]),
-      sunset: Time.at(day[:sunset]),
-      max_temp: day[:temp][:max],
-      min_temp: day[:temp][:min],
-      conditions: day[:weather][0][:description],
-      icon: day[:weather][0][:icon]
+      date: Time.at(d[:dt]),
+      sunrise: Time.at(d[:sunrise]),
+      sunset: Time.at(d[:sunset]),
+      max_temp: d[:temp][:max],
+      min_temp: d[:temp][:min],
+      conditions: d[:weather][0][:description],
+      icon: d[:weather][0][:icon]
       }
     end
   end
 end
+
+  # def self.start_city(data)
+  #   data[:timezone].partition('/').last
+  # end
+  # embarrassed when i found where the start and end cities were nested 
