@@ -14,7 +14,7 @@ class LocationService
       f.params[:from] = start_city
       f.params[:to] = end_city
     end
-
+    
     JSON.parse(response.body, symbolize_names: true)
   end
 

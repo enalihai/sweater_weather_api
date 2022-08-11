@@ -44,8 +44,8 @@ class GeoForecast
     data[:daily].map do |d|
       {
       date: Time.at(d[:dt]),
-      sunrise: Time.at(d[:sunrise]),
-      sunset: Time.at(d[:sunset]),
+      sunrise: Time.at(d[:sunrise]).strftime('%T'),
+      sunset: Time.at(d[:sunset]).strftime('%T'),
       max_temp: d[:temp][:max],
       min_temp: d[:temp][:min],
       conditions: d[:weather][0][:description],

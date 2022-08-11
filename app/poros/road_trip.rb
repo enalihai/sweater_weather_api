@@ -5,43 +5,24 @@ class RoadTrip
               :end_city,
               :travel_time,
               :temperature,
-              :conditions,
-              :total_duration
+              :conditions
 
   def initialize(directions, outlook)
-    # @start_city = outlook[-1]
-    @end_city = directions[:route][:legs].last[:destNarrative]
-    @travel_time = total_duration(directions)[0..1].to_i
-    @temperature = outlook.hourly_forecast["#{@total_hours}".to_i][:temperature]
-    @conditions = outlook.hourly_forecast["#{@total_hours}".to_i][:conditions]
-    @total_hours = total_duration(directions)[0..1].to_i + 1
-  end
-
-  def total_duration(directions)
-    binding.pry
-    time_array = directions[:route][:legs][0][:maneuvers].map do |direction| 
-      direction[:formattedTime]
-    end 
-
-    sum_array = time_array.map do |t|
-      hour, minute = t.split(':')
-      minns = hour.to_i * 60 + minute.to_i
-    end
-
-    total_mins = sum_array.sum
-    mins = total_mins.to_i % 60
-    hours = total_mins.to_i / 60
-
-    "#{hours} hours and #{mins} minutes"
-  end
+    @start_city = directions.start_city
+    @end_city = directions.end_city
+    @travel_time = directions.travel_time
+    @temperature = outlook.temperature
+    @conditions = outlook.conditions
+  end  
 end
+# my weather def isnt going to the right day.
+# def destination_forecast(directions)
+#   total_hours = total_duration(directions)[0..1].to_i > 48
+  
+#   if total_hours > 48
+#     render json: {data: { error: 'impossible route'}}
+#   else
+#     @conditions
+#   end
+# end
 
-  # def destination_forecast(directions)
-  #   total_hours = total_duration(directions)[0..1].to_i > 48
-    
-  #   if total_hours > 48
-  #     render json: {data: { error: 'impossible route'}}
-  #   else
-  #     @conditions
-  #   end
-  # end

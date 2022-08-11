@@ -13,7 +13,7 @@ class LocationFacade
 
   def self.get_directions(start_city, end_city)
     location_service = LocationService.directions(start_city, end_city)
-    
+    # may add the impossibl route here
     Directions.new(location_service)
   end
 end
